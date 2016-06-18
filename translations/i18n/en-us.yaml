@@ -1,0 +1,13 @@
+i18n:
+  title: 'I18n Demo Page'
+  literal: 'Literally Representation'
+  argument: 'Hello, {who}!'
+  formatted:
+    with-type: 'I have {amount, number} cats, '
+    with-percent: 'Almost {ratio, number, percent} of them are black.'
+    with-plural: 'You have {amount, plural,
+      =0 {no photos.}
+      =1 {one photo.}
+      other {# photos.}}'
+  none: 'None'
+  more-options: 'More Options'

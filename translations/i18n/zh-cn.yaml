@@ -1,0 +1,13 @@
+i18n:
+  title: '国际化演示页面'
+  literal: '字面表示'
+  argument: '你好，{who}！'
+  formatted:
+    with-type: '我有 {amount, number} 只猫，'
+    with-percent: '它们中大约 {ratio, number, percent} 是黑色的。'
+    with-plural: '你{amount, plural,
+      =0 {没有任何照片。}
+      =1 {有一张照片。}
+      other {有 # 张照片。}}'
+  none: '无'
+  more-options: '更多选项'

@@ -1,0 +1,67 @@
+<h2>{{t 'i18n.title'}}</h2>
+
+{{!--
+{{link-to '中文' 'i18n'}}
+{{link-to 'English' 'i18n'}}
+--}}
+
+<style>
+  .i18n-example h4 {
+    padding: .2rem;
+    background-color: lightgray;
+  }
+</style>
+
+<ol class="i18n-example">
+  <li>
+    <h4>\{{t 'i18n.literal'}}</h4>
+    <p>{{t 'i18n.literal'}}</p>
+  </li>
+
+  <li>
+    <h4>\{{t 'i18n.argument'}}</h4>
+    <p>{{t 'i18n.argument' who='John Doe'}}</p>
+    <p>{{t 'i18n.argument' who='世界'}}</p>
+  </li>
+
+  <li>
+    <h4>\{{t 'i18n.formatted.with-type' amount=100}} \{{t 'i18n.formatted.with-percent' ratio=30}}</h4>
+    <p>{{t 'i18n.formatted.with-type' amount=100}}{{t 'i18n.formatted.with-percent' ratio=30}}</p>
+  </li>
+
+  <li>
+    <h4>\{{format-number 67.89}} | \{{format-number 67.89 format='currency'}} | \{{format-number 67.89 style='currency' currency='CNY'}}</h4>
+    <p>{{format-number 67.89}} | {{format-number 67.89 format='USD'}} | {{format-number 67.89 style='currency' currency='CNY'}}</p>
+  </li>
+
+  <li>
+    <h4>\{{format-number undefined fallback=(t 'i18n.none')}}</h4>
+    <p>{{format-number undefined fallback=(t 'i18n.none')}}</p>
+    <a href="https://github.com/jasonmit/ember-intl/wiki/Format-Number-Options">{{t 'i18n.more-options'}}</a>
+  </li>
+
+  <li>
+    <h4>\{{format-date model.now weekday='long' timeZone='Asia/Shanghai'}} | \{{format-date model.now hour='numeric' minute='numeric' hour12=true}}</h4>
+    <p>{{format-date model.now weekday='long'}} | {{format-date model.now hour='numeric' minute='numeric' hour12=true}}</p>
+    <pre><code>timeZone</code> is currently not supported on safari</pre>
+    <a href="https://github.com/jasonmit/ember-intl/wiki/Format-Date-&-Time-Options">{{t 'i18n.more-options'}}</a>
+  </li>
+
+  <li>
+    <h4>\{{format-time model.now format='hhmmss'}} | \{{format-time model.now hour='numeric' minute='numeric' hour12=false}}</h4>
+    <p>{{format-time model.now format='hhmmss'}} | {{format-time model.now hour='numeric' minute='numeric' hour12=false}}</p>
+    <a href="https://github.com/jasonmit/ember-intl/wiki/Format-Date-&-Time-Options">{{t 'i18n.more-options'}}</a>
+  </li>
+
+  <li>
+    <h4>\{{format-relative model.now interval=1000}}</h4>
+    <p>{{format-relative model.now interval=1000}}</p>
+  </li>
+
+  <li>
+    <h4>\{{t 'i18n.formatted.with-plural' amount=0}} | \{{t 'i18n.formatted.with-plural' amount=1}} | \{{t 'i18n.formatted.with-plural' amount=18}}</h4>
+    <p>{{t 'i18n.formatted.with-plural' amount=0}} | {{t 'i18n.formatted.with-plural' amount=1}} | {{t 'i18n.formatted.with-plural' amount=18}}</p>
+  </li>
+</ol>
+
+{{outlet}}

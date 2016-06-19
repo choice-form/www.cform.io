@@ -1,0 +1,11 @@
+import { moduleForComponent, test } from 'ember-qunit';
+import hbs from 'htmlbars-inline-precompile';
+
+moduleForComponent('cform-loader', '集成测试 | 组件 | 全局加载', {
+  integration: true
+});
+
+test('正常渲染', function(assert) {
+  this.render(hbs`{{cform-loader}}`);
+  assert.equal(this.$().text().trim(), '');
+});

@@ -1,0 +1,52 @@
+@value outer-color: #7774c5;
+@value inner-color: #5940aa;
+@value loader-dimension: 88px;
+@value loader-border-radius: 12px;
+
+.loader-size {
+  position: absolute 0;
+  width: loader-dimension;
+  height: loader-dimension;
+}
+
+.loader-detail {
+  border-radius: loader-border-radius;
+  mix-blend-mode: multiply;
+}
+
+.loader-wrapper {
+  position: fixed 0;
+  background-color: white;
+}
+
+.loader {
+  composes: loader-size;
+  margin: auto;
+}
+
+.loader-outer {
+  composes: loader-size;
+  composes: loader-detail;
+  background-color: outer-color;
+  animation: outer-rotation 2s cubic-bezier(0.66, -0.7, 0.27, 1.6) infinite;
+}
+
+.loader-inner {
+  composes: loader-size;
+  composes: loader-detail;
+  background-color: inner-color;
+  animation: inner-rotation 2s cubic-bezier(0.66, -0.7, 0.27, 1.6) infinite;
+}
+
+.loader-character {
+  composes: loader-size;
+  fill: white;
+}
+
+@keyframes outer-rotation {
+  to {transform: rotate(90deg);}
+}
+
+@keyframes inner-rotation {
+  to {transform: rotate(180deg);}
+}

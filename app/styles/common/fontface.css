@@ -1,0 +1,30 @@
+@font-face {font-family: "Kiro Regular";
+  src: url("/assets/fonts/Kiro W01 Regular.eot");
+  src: url("/assets/fonts/Kiro W01 Regular.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/Kiro W01 Regular.woff2") format("woff2"),
+       url("/assets/fonts/Kiro W01 Regular.woff") format("woff"),
+       url("/assets/fonts/Kiro W01 Regular.ttf") format("truetype"),
+       url("/assets/fonts/Kiro W01 Regular.svg#Kiro W01 Regular") format("svg");
+}
+
+/*
+@font-face {font-family: "Kiro Light";
+  src: url("/assets/fonts/Kiro W01 Light.eot");
+  src: url("/assets/fonts/Kiro W01 Light.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/Kiro W01 Light.woff2") format("woff2"),
+       url("/assets/fonts/Kiro W01 Light.woff") format("woff"),
+       url("/assets/fonts/Kiro W01 Light.ttf") format("truetype"),
+       url("/assets/fonts/Kiro W01 Light.svg#Kiro W01 Light") format("svg");
+}
+*/
+
+/*
+@font-face {font-family: "Kiro Bold";
+  src: url("/assets/fonts/Kiro W01 Bold.eot");
+  src: url("/assets/fonts/Kiro W01 Bold.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/Kiro W01 Bold.woff2") format("woff2"),
+       url("/assets/fonts/Kiro W01 Bold.woff") format("woff"),
+       url("/assets/fonts/Kiro W01 Bold.ttf") format("truetype"),
+       url("/assets/fonts/Kiro W01 Bold.svg#Kiro W01 Bold") format("svg");
+}
+*/

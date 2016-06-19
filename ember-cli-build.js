@@ -20,6 +20,14 @@ module.exports = function(defaults) {
           require('postcss-reporter')({clearMessages: true})
         ]
       }
+    },
+    outputPaths: {
+      app: {
+        css: {
+          'app': '/assets/bundle.css'
+        },
+        js: '/assets/bundle.js'
+      }
     }
   });
 

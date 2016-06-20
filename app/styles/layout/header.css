@@ -1,0 +1,35 @@
+@import "../common/variables.css";
+
+.banner {
+  clear: fix;
+  color: white;
+  background-color: var(--purple);
+
+  @media (--mobile) {
+    max-height: 48px;
+  }
+}
+
+.banner h1 {
+  margin: 0;
+  font-family: "Kiro Bold", sans-serif;
+
+  @media (--mobile) {
+    lost-column: 1/3 0 0;
+    lost-offset: -2/3;
+    & > small {
+      display: inline-block;
+      font-size: .67em;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.banner nav {
+  font-family: "Kiro Light", sans-serif;
+}
+
+.banner nav :any-link {
+  color: white;
+}
+

@@ -1,13 +1,17 @@
-<header>
+<header class="banner">
+  <h1>©️  <small>Company</small></h1>
   <nav>
-    <ol>
-      <li>Menu 1</li>
-    </ol>
-    <h1>{{t 'application.brand'}}</h1>
-    <ul>
-      <li>Sign in</li>
-      <li>Create an account</li>
-    </ul>
+    <div>
+      {{link-to "Menu 1" "application"}}
+      {{link-to "Menu 2" "application"}}
+      {{link-to "Menu 3" "application"}}
+      {{link-to "Menu 4" "application"}}
+      {{link-to "Menu 5" "application"}}
+    </div>
+    <div>
+      <a href="/signin">Sign in</a>
+      <a href="/signup">Create an account</a>
+    </div>
   </nav>
 </header>
 

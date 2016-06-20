@@ -7,13 +7,11 @@ module.exports = function(defaults) {
     // https://github.com/salsify/ember-css-modules
     cssModules: {
       plugins: {
-        before: [
-          require('postcss-import')({path: './app'}),
-          require('postcss-assets')({cachebuster: true, basePath: 'public/'})
-        ],
         after: [
-          require('lost'),
+          require('postcss-import')({path: './app'}),
+          require('postcss-assets')({cachebuster: true, basePath: 'public/'}),
           require('postcss-cssnext')({warnForDuplicates: false}),
+          require('lost'),
           require('rucksack-css')({fallbacks: true}),
           require('cssnano')({safe: true}),
           require('postcss-browser-reporter'),

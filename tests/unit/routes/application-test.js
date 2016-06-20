@@ -5,7 +5,7 @@ moduleFor('route:application', '单元测试 | 路由 | application', {
   // needs: ['controller:foo']
 });
 
-test('路由定义正确', function(assert) {
+test('定义正确', function(assert) {
   let route = this.subject();
-  assert.ok(route);
+  assert.ok(route, '路由可以正确实例化');
 });

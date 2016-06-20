@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:i18n', '单元测试 | 路由 | i18n', {
+moduleFor('route:index', '单元测试 | 路由 | index', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

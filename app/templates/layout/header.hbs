@@ -1,17 +1,19 @@
 <header class="banner">
   <h1>©️  <small>Company</small></h1>
-  {{hamburger-menu class="hamburger-menu"}}
-  <nav>
-    <div>
-      {{link-to "Menu 1" "application"}}
-      {{link-to "Menu 2" "application"}}
-      {{link-to "Menu 3" "application"}}
-      {{link-to "Menu 4" "application"}}
-      {{link-to "Menu 5" "application"}}
-    </div>
-    <div>
-      <a href="/signin">Sign in</a>
-      <a href="/signup">Create an account</a>
-    </div>
-  </nav>
+
+  {{#if menuShown}}
+    <nav>
+      <div class="primary" role="menu">
+        {{link-to "Features" "application"}}
+        {{link-to "Examples" "application"}}
+        {{link-to "Services" "application"}}
+      </div>
+      <div class="session" role="menu">
+        <a href="/signin">Sign in</a>
+        <a href="/signup">Create an account</a>
+      </div>
+    </nav>
+  {{/if}}
+
+  {{hamburger-menu class="hamburger-menu" onToggle=(action "toggleMenu")}}
 </header>

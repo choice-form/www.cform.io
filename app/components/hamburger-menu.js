@@ -79,5 +79,7 @@ export default Ember.Component.extend({
     }
 
     this.toggleProperty('closed')
+
+    this.onToggle()
   }
 })

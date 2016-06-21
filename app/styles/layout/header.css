@@ -4,10 +4,6 @@
   clear: fix;
   color: white;
   background-color: var(--purple);
-
-  @media (--mobile) {
-    max-height: 48px;
-  }
 }
 
 .banner h1 {
@@ -17,6 +13,7 @@
   @media (--mobile) {
     lost-column: 3/5 0 0;
     lost-offset: -3/5;
+
     & > small {
       display: inline-block;
       font-size: .67em;
@@ -25,19 +22,38 @@
   }
 }
 
+.banner nav {
+  font-family: "Kiro Light", sans-serif;
+}
+
+.banner nav :any-link {
+  color: white;
+  text-decoration-line: none;
+
+  @media (--mobile) {
+    display: block;
+    padding: .75em 0;
+    text-align: center;
+  }
+}
+
+.banner .primary {
+  @media (--mobile) {
+    border-bottom: 1px solid white;
+    padding-bottom: .75em;
+  }
+}
+
+.banner .session :any-link {
+  @media (--mobile) {
+    lost-column: 1/2 0 0;
+  }
+}
+
 .hamburger-menu {
   display: inline-block;
   @media (--tablet), (--desktop) {
     display: none;
   }
-}
-
-.banner nav {
-  font-family: "Kiro Light", sans-serif;
-  background-color: var(--purple);
-}
-
-.banner nav :any-link {
-  color: white;
 }
 

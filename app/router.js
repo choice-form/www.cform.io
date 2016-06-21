@@ -6,6 +6,22 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  // 功能
+  this.route('features')
+
+  // 案例
+  this.route('examples')
+
+  // 服务
+  this.route('services')
+
+  // 登录
+  this.route('signin')
+
+  // 注册
+  this.route('signup')
+
+  // 测试国际化
   this.route('i18n');
 });
 

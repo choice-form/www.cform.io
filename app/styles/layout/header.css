@@ -24,6 +24,20 @@
 
 .banner nav {
   font-family: "Kiro Light", sans-serif;
+  background-color: var(--purple);
+
+  @media(--mobile) {
+    position: absolute 48px 0 auto;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .3s ease-out, opacity .2s linear;
+
+    &.shown {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
 }
 
 .banner nav :any-link {
@@ -44,9 +58,13 @@
   }
 }
 
-.banner .session :any-link {
-  @media (--mobile) {
-    lost-column: 1/2 0 0;
+.banner .session {
+  clear: fix;
+
+  & :any-link {
+    @media (--mobile) {
+      lost-column: 1/2 0 0;
+    }
   }
 }
 

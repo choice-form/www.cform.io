@@ -1,19 +1,15 @@
-<header class="banner">
-  <h1>©️  <small>Company</small></h1>
+<h1>©️  <small>Company</small></h1>
 
-  {{#if menuShown}}
-    <nav>
-      <div class="primary" role="menu">
-        {{link-to "Features" "application"}}
-        {{link-to "Examples" "application"}}
-        {{link-to "Services" "application"}}
-      </div>
-      <div class="session" role="menu">
-        <a href="/signin">Sign in</a>
-        <a href="/signup">Create an account</a>
-      </div>
-    </nav>
-  {{/if}}
+<nav class={{menuVisibility}}>
+  <div class="primary" role="menu">
+    {{link-to "Features" "application"}}
+    {{link-to "Examples" "application"}}
+    {{link-to "Services" "application"}}
+  </div>
+  <div class="session" role="menu">
+    <a href="/signin">Sign in</a>
+    <a href="/signup">Create an account</a>
+  </div>
+</nav>
 
-  {{hamburger-menu class="hamburger-menu" onToggle=(action "toggleMenu")}}
-</header>
+{{hamburger-menu class="hamburger-menu" isMenuShown=(mut isMenuShown)}}

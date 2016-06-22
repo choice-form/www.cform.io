@@ -7,15 +7,18 @@ import config from './config/environment';
 Ember.Route.reopen({
   hasLayout: true,
 
-  // FIXME: don't render anything when overriding, use mixin instead
   renderTemplate() {
     this._super(...arguments)
 
     if (/.*(loading|error)$/.test(this.routeName)) return
 
     if (this.get('hasLayout')) {
-      this.render('layout/header', {into: 'application', outlet: 'header'})
-      this.render('layout/footer', {into: 'application', outlet: 'footer'})
+      this.render('layout/header', {
+        into: 'application', outlet: 'header', controller: 'layout'
+      })
+      this.render('layout/footer', {
+        into: 'application', outlet: 'footer', controller: 'layout'
+      })
     }
   }
 })

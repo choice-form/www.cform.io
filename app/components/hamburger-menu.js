@@ -66,6 +66,7 @@ export default Ember.Component.extend({
 
   click() {
     this.toggleProperty('scaled')
+
     Ember.run.later(this, 'toggleProperty', 'scaled', 350)
 
     if (this.get('closed')) {
@@ -80,6 +81,6 @@ export default Ember.Component.extend({
 
     this.toggleProperty('closed')
 
-    this.onToggle()
+    this.attrs.isMenuShown.update(!this.attrs.isMenuShown.value)
   }
 })

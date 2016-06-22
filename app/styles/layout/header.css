@@ -27,6 +27,7 @@
   background-color: var(--purple);
 
   @media(--mobile) {
+    z-index: var(--z-menu);
     position: absolute 48px 0 auto;
     opacity: 0;
     transform: scaleY(0);
@@ -70,7 +71,7 @@
 
 .hamburger-menu {
   display: inline-block;
-  @media (--tablet), (--desktop) {
+  @media (--tablet), (--laptop), (--desktop) {
     display: none;
   }
 }

@@ -1,9 +1,17 @@
 :root {
+  /* ONLY FOR MOCKUP */
+  --block-background: #4a4a4a;
+
+  /* PRODUCTION */
   --purple: #6633cc;
+
+  /* Z-INDEX */
+  --z-menu: 80;
+  --z-over: 90;
 }
 
 @custom-media --mobile (width <= 425px);
 @custom-media --tablet (width > 425px) and (width <= 768px);
-@custom-media --tablet-landscape (width > 768px) and (width <= 1024px);
-@custom-media --desktop (width > 768px);
+@custom-media --laptop (width > 768px) and (width <= 1024px);
+@custom-media --desktop (width > 1024px);
 

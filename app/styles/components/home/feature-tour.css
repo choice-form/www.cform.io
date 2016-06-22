@@ -1,0 +1,56 @@
+@import "../../common/variables.css";
+
+.features {
+  color: #9a9a9a;
+}
+
+.wrapper {
+  padding: 2rem 0;
+
+  @media (--mobile) {
+    text-align: center;
+  }
+}
+
+.heading {
+  clear: fix;
+  margin-bottom: 2rem;
+}
+
+.heading p {
+  @media (--tablet), (--laptop), (--desktop) {
+    lost-column: 1/2 0 0;
+  }
+}
+
+.heading header {
+  font-size: responsive 1.6rem 3.2rem;
+}
+
+.list {
+  clear: fix;
+  composes: unstyled-list from "../../common/helpers.css";
+  text-align: center;
+}
+
+.list li {
+  lost-column: 1/4 4 2rem;
+  margin-bottom: 2rem;
+
+  @media (--mobile) {
+    lost-column: 1/2 2 1rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (--tablet) {
+    lost-column: 1/4 4 1rem;
+    margin-bottom: 1rem;
+  }
+
+  padding: 2rem;
+  border: 1px solid #cdcdcd;
+}
+
+.icon {
+  font-size: 3rem;
+}

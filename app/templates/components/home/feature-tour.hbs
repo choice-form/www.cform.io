@@ -1,0 +1,17 @@
+<div class="layout-wrapper">
+  <div class={{styles.wrapper}}>
+    <section class={{styles.heading}}>
+      <header>tour</header>
+      <p>Mauris vel felis id mauris ultricies posuere. Cras imperdiet, mi vel volutpat suscipit, ligula metus sagittis dolor, ut fermentum nulla ante semper tortor.</p>
+    </section>
+    <ul class={{styles.list}}>
+      {{#each features as |f|}}
+        <li>
+          <div class="icon-atom {{styles.icon}}"></div>
+          <header>{{f.title}}</header>
+          <footer><small>{{f.description}}</small></footer>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

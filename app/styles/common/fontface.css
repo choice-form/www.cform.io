@@ -24,3 +24,25 @@
        url("/assets/fonts/Kiro W01 Bold.ttf") format("truetype"),
        url("/assets/fonts/Kiro W01 Bold.svg#Kiro W01 Bold") format("svg");
 }
+
+@font-face {
+    font-family: 'cform';
+    src: url('/assets/fonts/cform.eot');
+    src: url('/assets/fonts/cform.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/cform.woff') format('woff'),
+         url('/assets/fonts/cform.ttf') format('truetype'),
+         url('/assets/fonts/cform.svg#cform') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*='icon-']:before{
+  display: inline-block;
+  font-family: 'cform';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-atom:before{content:'\0041';}

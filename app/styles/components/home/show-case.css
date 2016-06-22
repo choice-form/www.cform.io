@@ -1,0 +1,55 @@
+@import "../../common/variables.css";
+
+.showcase {
+  color: white;
+  background-color: var(--purple);
+}
+
+.wrapper {
+  lost-align: center;
+  min-height: 40rem;
+  text-align: center;
+}
+
+.wrapper section {
+  width: 75%;
+}
+
+.slogan {
+  font-family: "Kiro Bold", sans-serif;
+  font-size: responsive 2rem 4rem;
+  line-height: 2;
+
+
+  & + p {
+    margin-bottom: 2rem;
+    font-size: responsive 1.2rem 1.8rem;
+  }
+}
+
+.get-start {
+  display: inline-block;
+  margin-bottom: 3rem;
+  padding: 13px 3rem 15px;
+  color: white;
+  background-color: var(--orange);
+  text-decoration: none;
+}
+
+.play-video {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.play-video::after {
+  content: "";
+  position: absolute 28px auto auto 18px;
+  border: 10px solid transparent;
+  border-right: none;
+  border-left-color: white;
+  transform: translate(3px, -14px);
+}

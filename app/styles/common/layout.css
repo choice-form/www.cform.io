@@ -1,7 +1,23 @@
-@import "../common/variables.css";
+@import "variables.css";
+
+.layout-wrapper {
+  clear: fix;
+  position: relative;
+
+  @media (width <= 960px) {
+    lost-center: 100% 1rem;
+  }
+
+  @media (width <= 1200px) {
+    lost-center: 960px;
+  }
+
+  @media (width > 1200px) {
+    lost-center: 1200px;
+  }
+}
 
 .banner {
-  clear: fix;
   color: white;
   background-color: var(--purple);
 }
@@ -11,8 +27,7 @@
   font-family: "Kiro Bold", sans-serif;
 
   @media (--mobile) {
-    lost-column: 3/5 0 0;
-    lost-offset: -3/5;
+    float: right;
 
     & > small {
       display: inline-block;
@@ -76,3 +91,57 @@
   }
 }
 
+.footer {
+  position: relative;
+  color: white;
+  background-color: var(--block-background);
+}
+
+.slogan {
+  margin-bottom: .5em;
+}
+
+.languages, .social-links {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style: none;
+
+  & > li {
+    display: inline;
+    font-size: 1rem;
+  }
+}
+
+.languages :any-link {
+  color: white;
+  text-decoration: none;
+}
+
+.languages > li:not(:last-child):after {
+  content: '|';
+  margin: 0 .25em;
+}
+
+.social-links {
+  position: absolute 1.5rem 1rem auto auto;
+}
+
+.social-links li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-top: .5em;
+  border-radius: 50%;
+  background-color: #8e8e8e;
+  text-align: center;
+
+  &:not(:last-child) {
+    margin-right: .5em;
+  }
+}
+
+.copyright {
+  color: #8e8e8e;
+}

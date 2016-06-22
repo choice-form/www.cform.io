@@ -2,6 +2,4 @@
 
 @import "common/fontface.css";
 @import "common/global.css";
-
-@import "layout/header.css";
-@import "layout/footer.css";
+@import "common/layout.css";

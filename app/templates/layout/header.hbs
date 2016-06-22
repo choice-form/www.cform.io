@@ -1,15 +1,17 @@
-<h1>©️  <small>Company</small></h1>
+<div class="layout-wrapper">
+  <h1>©️  <small>Company</small></h1>
 
-<nav class={{menuVisibility}}>
-  <div class="primary" role="menu">
-    {{link-to "Features" "application"}}
-    {{link-to "Examples" "application"}}
-    {{link-to "Services" "application"}}
-  </div>
-  <div class="session" role="menu">
-    <a href="/signin">Sign in</a>
-    <a href="/signup">Create an account</a>
-  </div>
-</nav>
+  <nav class={{menuVisibility}}>
+    <div class="primary" role="menu">
+      {{link-to "Features" "application"}}
+      {{link-to "Examples" "application"}}
+      {{link-to "Services" "application"}}
+    </div>
+    <div class="session" role="menu">
+      <a href="/signin">Sign in</a>
+      <a href="/signup">Create an account</a>
+    </div>
+  </nav>
 
-{{hamburger-menu class="hamburger-menu" isMenuShown=(mut isMenuShown)}}
+  {{hamburger-menu class="hamburger-menu" isMenuShown=(mut isMenuShown)}}
+</div>

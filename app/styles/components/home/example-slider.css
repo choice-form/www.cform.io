@@ -1,0 +1,82 @@
+@import "../../common/variables.css";
+
+.examples {
+  position: relative;
+}
+
+.background img {
+  max-width: 100%;
+
+  @media (--mobile) {
+    max-width: 175%;
+  }
+}
+
+.wrapper {
+  position: absolute 0 0 0 0;
+  margin: auto;
+  padding: 2rem;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  transform: translateX(54%);
+  box-shadow: 0 0 5px 0 gray(200);
+
+  @media (--mobile) {
+    padding: 1rem;
+    background-color: transparent;
+    transform: translateX(0);
+  }
+
+  @media (--desktop) {
+    width: 520px;
+    height: 520px;
+  }
+  @media (--laptop) {
+    width: 420px;
+    height: 420px;
+  }
+  @media (--tablet) {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+.container {
+  text-align: center;
+}
+
+.container h2 {
+  font-size: responsive 1.5rem 3rem;
+
+  @media (--tablet) {
+    font-size: 1.5rem;
+  }
+}
+
+.container p {
+  font-size: responsive 1rem 1.2rem;
+}
+
+.slide {
+  @media (--desktop) {
+    height: 420px;
+  }
+
+  @media (--laptop) {
+    height: 320px;
+  }
+
+  @media (--tablet) {
+    height: 240px;
+  }
+}
+
+.pagination {
+}
+
+.indicator {
+}
+
+.indicator-active {
+}

@@ -1,7 +1,12 @@
 import Ember from 'ember';
-import Swiper from 'swiper'
 
 export default Ember.Component.extend({
+  classNameBindings: ['styles.examples'],
+
+  didReceiveAttrs() {
+    this.set('currentBackground', this.examples[0]['background'])
+  },
+
   didInsertElement() {
     this.slider = new Swiper(`.${this.get('styles.container')}`, {
       speed: 900,
@@ -10,21 +15,11 @@ export default Ember.Component.extend({
       loop: true,
       effect: 'fade',
       fade: { crossFade: true },
+      autoHeight: false,
       grabCursor: true,
-      bulletClass: this.get('styles.indicator'),
-      bulletActiveClass: this.get('styles.indicator-active'),
       pagination: `.${this.get('styles.pagination')}`,
       paginationType: 'bullets',
       paginationClickable: true,
-      paginationBulletRender: (index, className) => {
-        const service = this.services[index]
-        return `
-        <section class=${className}>
-          <h3>${service.title}</h3>
-          <p>${service.description}</p>
-        </section>
-        `
-      },
     })
   }
 });

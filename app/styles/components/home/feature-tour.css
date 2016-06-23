@@ -28,14 +28,15 @@
 }
 
 .list {
-  clear: fix;
   composes: unstyled-list from "../../common/helpers.css";
+  clear: fix;
   text-align: center;
 }
 
 .list li {
   lost-column: 1/4 4 2rem;
   margin-bottom: 2rem;
+  border: 1px solid #cdcdcd;
 
   @media (--mobile) {
     lost-column: 1/2 2 1rem;
@@ -46,11 +47,50 @@
     lost-column: 1/4 4 1rem;
     margin-bottom: 1rem;
   }
+}
 
+.link {
+  display: block;
   padding: 2rem;
-  border: 1px solid #cdcdcd;
+  color: #9a9a9a;
+  text-decoration: none;
+
+  @media (--desktop) {
+    & div {
+      transition: .2s ease-in;
+    }
+  }
+}
+
+@media (--desktop) {
+  .link div:last-child {
+    opacity: 0;
+    transform: translateY(15%);
+  }
+
+  .link:hover div:last-child {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .link div:not(:last-child) {
+    transform: translateY(30%);
+  }
+
+  .link:hover div:not(:last-child) {
+    transform: translateY(0);
+  }
 }
 
 .icon {
   font-size: 3rem;
+}
+
+.title strong::after {
+  content: "";
+  display: block;
+  margin: .5rem auto .25rem;
+  height: 2px;
+  width: 20%;
+  background-color: #cdcdcd;
 }

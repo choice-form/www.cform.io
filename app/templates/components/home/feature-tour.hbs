@@ -6,11 +6,13 @@
     </section>
     <ul class={{styles.list}}>
       {{#each features as |f|}}
-        <li>
-          <div class="icon-atom {{styles.icon}}"></div>
-          <header>{{f.title}}</header>
-          <footer><small>{{f.description}}</small></footer>
-        </li>
+        {{#link-to "features" tagName="li"}}
+          {{#link-to "features" class=styles.link}}
+            <div><span class="{{styles.icon}} icon-linearicons"></span></div>
+            <div class={{styles.title}}><strong>{{f.title}}</strong></div>
+            <div><small>{{f.description}}</small></div>
+          {{/link-to}}
+        {{/link-to}}
       {{/each}}
     </ul>
   </div>

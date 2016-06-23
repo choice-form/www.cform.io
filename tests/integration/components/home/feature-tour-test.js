@@ -11,7 +11,7 @@ test('正确渲染 features 列表', function(assert) {
 
   const features = [...Array(8).keys()]
 
-  this.set('features', features.map(feature => ({
+  this.set('features', features.map(() => ({
     title: 'title', description: 'description'
   })))
 

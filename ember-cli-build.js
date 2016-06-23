@@ -1,4 +1,4 @@
-/*jshint node:true*/
+/* jshint node:true */
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
@@ -28,6 +28,10 @@ module.exports = function(defaults) {
       }
     }
   });
+
+  app.import('bower_components/Swiper/dist/css/swiper.css')
+  app.import('bower_components/Swiper/dist/js/swiper.js')
+  app.import('vendor/shims/swiper.js')
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

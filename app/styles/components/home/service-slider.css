@@ -1,0 +1,120 @@
+@import "../../common/variables.css";
+
+.strecth {
+  @media (--mobile) {
+    padding: 0;
+  }
+}
+
+.optional-heading {
+  display: none;
+  padding: 0 1rem 1rem;
+  text-align: center;
+
+  @media (--mobile) {
+    display: block;
+  }
+
+  & h2 {
+    color: gray(125);
+  }
+
+  & p {
+    color: gray(175);
+  }
+}
+
+.container {
+}
+
+.wrapper {
+  position: relative;
+
+  @media (--tablet), (--laptop), (--desktop) {
+    padding: 3rem 0;
+  }
+}
+
+.slide {
+  & div {
+    lost-column: 1/2 2 1rem;
+
+    @media (--mobile) {
+      lost-column: 1/1 0 0;
+    }
+  }
+}
+
+.content {
+  @media (--mobile) {
+    position: absolute auto auto 0;
+    padding: 1rem;
+    background-color: gray(0, 25%);
+  }
+
+  & h2 {
+    margin: 4rem 0 2rem;
+    @media (--mobile) {
+      margin: 1rem 0;
+    }
+
+    @media (--tablet) {
+      margin-top: 3rem 0 1.5rem;
+    }
+
+    color: gray(175);
+    font-size: responsive 1.2rem 2.4rem;
+  }
+
+  & p {
+    color: gray(150);
+    font-size: responsive 1rem 1.2rem;
+  }
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  display: block;
+  height: 425px;
+
+  @media (--desktop), (--laptop), (--tablet) {
+    display: inline-block;
+  }
+}
+
+.pagination {
+  clear: fix;
+  @media (--mobile) {
+    z-index: var(--z-high);
+    position: absolute 0 0 auto;
+  }
+}
+
+.indicator::before,
+.indicator-active::before {
+  content: "";
+  display: block;
+  position: absolute 0 0 auto;
+  height: 4px;
+  background-color: gray(225);
+}
+
+.indicator {
+  lost-column: 1/4 4 0;
+  position: relative;
+  padding: 1rem 0;
+  cursor: pointer;
+
+  @media (--mobile) {
+    height: 4px;
+    padding: 0;
+    font-size: 0;
+  }
+}
+
+.indicator-active::before {
+  background-color: gray(100);
+}

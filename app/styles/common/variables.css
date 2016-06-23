@@ -7,6 +7,7 @@
   --orange: #f48200;
 
   /* Z-INDEX */
+  --z-high: 50;
   --z-menu: 80;
   --z-over: 90;
 }

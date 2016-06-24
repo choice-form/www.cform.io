@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import Swiper from 'swiper';
 
 export default Ember.Component.extend({
   classNameBindings: ['styles.examples'],

@@ -13,6 +13,5 @@ test('正确渲染', function(assert) {
   this.set('examples', [{background: ''}])
   this.render(hbs`{{home/example-slider examples=examples}}`);
 
-  debugger
   assert.equal(this.$().length, 1);
 });

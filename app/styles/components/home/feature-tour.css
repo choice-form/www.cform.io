@@ -55,14 +55,14 @@
   color: #9a9a9a;
   text-decoration: none;
 
-  @media (--desktop) {
+  @media (--desktop), (--laptop) {
     & div {
       transition: .2s ease-in;
     }
   }
 }
 
-@media (--desktop) {
+@media (--desktop), (--laptop) {
   .link div:last-child {
     opacity: 0;
     transform: translateY(15%);

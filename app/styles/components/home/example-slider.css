@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.background {
+  overflow: hidden;
+}
+
 .background img {
   max-width: 100%;
 

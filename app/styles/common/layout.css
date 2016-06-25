@@ -18,30 +18,36 @@
 }
 
 .banner {
+  clear: fix;
   color: white;
   background-color: var(--purple);
 }
 
 .banner h1 {
+  lost-column: 1/4 0 0;
   margin: 0;
   font-family: "Kiro Bold", sans-serif;
 
   @media (--mobile) {
-    float: right;
+    lost-column: none;
+    float: right !important;
+  }
 
-    & > small {
-      display: inline-block;
-      font-size: .67em;
-      transform: translateY(-3px);
-    }
+  & > small {
+    display: inline-block;
+    font-size: .67em;
+    transform: translateY(-3px);
   }
 }
 
 .banner nav {
-  font-family: "Kiro Light", sans-serif;
+  clear: fix;
+  lost-column: 3/4 4 0;
+  font-family: "Kiro Regular", sans-serif;
   background-color: var(--purple);
 
   @media(--mobile) {
+    lost-column: none;
     z-index: var(--z-menu);
     position: absolute 48px 0 auto;
     opacity: 0;
@@ -56,7 +62,33 @@
   }
 }
 
+.banner .primary {
+  lost-column: 3/5 0 0;
+
+  @media (--mobile) {
+    lost-column: none;
+    border-bottom: 1px solid white;
+    padding-bottom: .75em;
+  }
+}
+
+.banner .session {
+  clear: fix;
+  lost-column: 2/5 0 0;
+  text-align: right;
+
+  @media (--mobile) {
+    lost-column: none;
+
+    & :any-link {
+      lost-column: 1/2 0 0;
+    }
+  }
+}
+
 .banner nav :any-link {
+  display: inline-block;
+  padding: 12px .5rem;
   color: white;
   text-decoration-line: none;
 
@@ -67,27 +99,11 @@
   }
 }
 
-.banner .primary {
-  @media (--mobile) {
-    border-bottom: 1px solid white;
-    padding-bottom: .75em;
-  }
-}
-
-.banner .session {
-  clear: fix;
-
-  & :any-link {
-    @media (--mobile) {
-      lost-column: 1/2 0 0;
-    }
-  }
-}
-
 .hamburger-menu {
-  display: inline-block;
-  @media (--tablet), (--laptop), (--desktop) {
-    display: none;
+  display: none;
+
+  @media (--mobile) {
+    display: block;
   }
 }
 

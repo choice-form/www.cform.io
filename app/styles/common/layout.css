@@ -35,6 +35,7 @@
 
   & > small {
     display: inline-block;
+    cursor: pointer;
     font-size: .67em;
     transform: translateY(-3px);
   }

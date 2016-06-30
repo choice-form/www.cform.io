@@ -19,7 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.2",
+    "broccoli-asset-rev": "^2.4.4",
     "cssnano": "^3.7.0",
     "d3-ease": "^1.0.0",
     "ember-ajax": "^2.4.0",

@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Component from 'ember-component'
 import Swiper from 'swiper'
 
-export default Ember.Component.extend({
+export default Component.extend({
   didInsertElement() {
     this.slider = new Swiper(`.${this.get('styles.container')}`, {
       speed: 900,
@@ -27,4 +27,4 @@ export default Ember.Component.extend({
       },
     })
   }
-});
+})

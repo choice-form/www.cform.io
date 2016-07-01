@@ -13,5 +13,7 @@
 /connect.lock
 /coverage/*
 /libpeerconnection.log
+.#*
 npm-debug.log
+.tern-port
 testem.log

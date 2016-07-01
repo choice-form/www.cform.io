@@ -1,19 +1,17 @@
-<div class="layout-wrapper">
-  <div class={{styles.wrapper}}>
-    <section class={{styles.heading}}>
-      <header>tour</header>
-      <p>Mauris vel felis id mauris ultricies posuere. Cras imperdiet, mi vel volutpat suscipit, ligula metus sagittis dolor, ut fermentum nulla ante semper tortor.</p>
-    </section>
-    <ul class={{styles.list}}>
-      {{#each features as |f|}}
-        {{#link-to "features" tagName="li"}}
-          {{#link-to "features" class=styles.link}}
-            <div><span class="{{styles.icon}} icon-linearicons"></span></div>
-            <div class={{styles.title}}><strong>{{f.title}}</strong></div>
-            <div><small>{{f.description}}</small></div>
-          {{/link-to}}
+<div class={{styles.wrapper}}>
+  <section class={{styles.heading}}>
+    <header>tour</header>
+    <p>Mauris vel felis id mauris ultricies posuere. Cras imperdiet, mi vel volutpat suscipit, ligula metus sagittis dolor, ut fermentum nulla ante semper tortor.</p>
+  </section>
+  <ul class={{styles.list}}>
+    {{#each features as |f|}}
+      {{#link-to "features" tagName="li"}}
+        {{#link-to "features" class=styles.link}}
+          <div><span class="{{styles.icon}} icon-linearicons"></span></div>
+          <div class={{styles.title}}><strong>{{f.title}}</strong></div>
+          <div><small>{{f.description}}</small></div>
         {{/link-to}}
-      {{/each}}
-    </ul>
-  </div>
+      {{/link-to}}
+    {{/each}}
+  </ul>
 </div>

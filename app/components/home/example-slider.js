@@ -1,7 +1,7 @@
-import Ember from 'ember';
-import Swiper from 'swiper';
+import Component from 'ember-component'
+import Swiper from 'swiper'
 
-export default Ember.Component.extend({
+export default Component.extend({
   classNameBindings: ['styles.examples'],
 
   didReceiveAttrs() {
@@ -23,4 +23,4 @@ export default Ember.Component.extend({
       paginationClickable: true,
     })
   }
-});
+})

@@ -1,0 +1,29 @@
+<ul class={{styles.anchors}}>
+  {{#each features as |f|}}
+    {{#with (concat "#feature" f.id) as |anchor|}}
+      <li>
+        <a href="/features{{anchor}}" onclick={{action "animateScrolling" anchor}}>
+          {{f.title}}
+        </a>
+      </li>
+    {{/with}}
+  {{/each}}
+</ul>
+
+{{#each features as |f|}}
+  <div class={{styles.wrapper}} id="feature{{f.id}}">
+    <div class={{styles.feature}}>
+      <section class={{styles.content}}>
+        <div>
+          <h2>{{f.title}}</h2>
+          <p>{{f.description}}</p>
+        </div>
+        <div>
+          <figure>
+            <img src={{f.figure}} title={{f.title}}/>
+          </figure>
+        </div>
+      </section>
+    </div>
+  </div>
+{{/each}}

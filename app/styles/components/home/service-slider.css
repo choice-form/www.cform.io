@@ -1,6 +1,7 @@
 @import "../../common/variables.css";
 
-.strecth {
+.wrapper {
+  composes: wrapper from "../../common/helpers.css";
   @media (--mobile) {
     padding: 0;
   }
@@ -27,7 +28,7 @@
 .container {
 }
 
-.wrapper {
+.slide-wrapper {
   position: relative;
 
   @media (--tablet), (--laptop), (--desktop) {

@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-  padding: 2rem 0;
+  composes: wrapper from "../../common/helpers.css";
 
   @media (--mobile) {
     text-align: center;

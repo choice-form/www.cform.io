@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+[data-ember-action]:not(:disabled) {
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   font: 16px/1.5 "Kiro Regular", sans-serif;
@@ -16,10 +20,8 @@ body {
 @keyframes application {
   from {
     opacity: 0;
-    transform: translateY(1rem);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }

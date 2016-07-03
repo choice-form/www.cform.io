@@ -1,6 +1,6 @@
 import { moduleForModel, test } from 'ember-qunit'
 
-moduleForModel('feature', '单元测试 | 数据模型 | feature', {
+moduleForModel('home/feature', '单元测试 | 数据模型 | home/feature', {
   // Specify the other units that are required for this test.
   needs: []
 })

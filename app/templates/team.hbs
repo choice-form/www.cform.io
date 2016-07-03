@@ -1,1 +1,8 @@
-{{outlet}}
+<h1>It's a pleasure to know you ;-)</h1>
+
+{{#each model as |employee|}}
+  <div><img src={{employee.avatar}} title={{employee.name}}/></div>
+  <div>{{employee.name}}</div>
+  <div>{{employee.title}}</div>
+  <div>{{employee.intro}}</div>
+{{/each}}

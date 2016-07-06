@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+
+<div>
+  {{#each employees as |employee|}}
+    <section class={{styles.employee}}>
+      <div class={{styles.avatar}}><img src={{employee.avatar}} title={{employee.name}}/></div>
+      <div class={{styles.name}}>{{employee.name}}</div>
+      <div class={{styles.title}}><strong>{{employee.title}}</strong></div>
+      <div class={{styles.intro}}>{{employee.intro}}</div>
+    </section>
+  {{/each}}
+</div>

@@ -14,6 +14,7 @@
 /coverage/*
 /libpeerconnection.log
 .#*
+.dir-locals.el
 npm-debug.log
 .tern-port
 testem.log

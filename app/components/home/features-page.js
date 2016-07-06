@@ -14,6 +14,8 @@ export default Component.extend({
 
     // 设定锚点导航滚动后置顶的场景
     this.keepAnchorsOnTop(this.element.firstChild)
+    // 设定进入样例后更新地址栏的场景
+    this.enterSceneUpdateUrl(this.element.children)
 
     // 设定锚点触发后的动画滚动效果
     this.$controller.scrollTo(this.customScrollTo)
@@ -26,7 +28,11 @@ export default Component.extend({
     if (isEmpty(anchor)) return
 
     this.$controller.scrollTo(anchor, {
-      headroom: this.element.firstChild.clientHeight
+      headroom: this.element.firstChild.clientHeight,
+      onRefresh: true,
+      onComplete: () => {
+        this.modifyUrl(anchor)
+      }
     })
   },
 
@@ -35,6 +41,9 @@ export default Component.extend({
 
     // 销毁所有的滚动场景
     this.$anchorsScene.destroy()
+    this.$featureScenes.forEach(function(scene) {
+      scene.destroy()
+    })
 
     // 销毁滚动控制器
     this.$controller.destroy()
@@ -50,6 +59,31 @@ export default Component.extend({
       .addTo(this.$controller)
   },
 
+  enterSceneUpdateUrl(elements) {
+    this.$featureScenes = []
+
+    Array.prototype.forEach.call(elements, (element, index) => {
+      if(index === 0) return
+
+      this.$featureScenes.push(new ScrollMagic.Scene({
+        triggerElement: element,
+        triggerHook: 'onLeave',
+        duration: element.clientHeight
+      })
+        .on("enter", () => {
+          this.modifyUrl(`#${element.id}`)
+        })
+        .addTo(this.$controller)
+      )
+    })
+
+    this.$featureScenes[0].on("leave", (e) => {
+      if(e.state === 'BEFORE') {
+        this.modifyUrl('')
+      }
+    })
+  },
+
   customScrollTo(newScrollPos, options) {
     TweenLite.to(options.container || window, 0.25, {
       scrollTo: {y: newScrollPos - (options.headroom || 0)},
@@ -59,16 +93,23 @@ export default Component.extend({
     })
   },
 
+  modifyUrl(params) {
+    if(params === location.hash) return
+    if (history.replaceState) {
+      history.replaceState(null, null, `${location.pathname}${params}`)
+    } else {
+      location.hash = params
+    }
+  },
+
   actions: {
     animateScrolling(anchor, event) {
       event.preventDefault()
       this.$controller.scrollTo(anchor, {
         scrollController: this.$controller,
         headroom: this.element.firstChild.clientHeight,
-        onComplete() {
-          if (history.pushState)
-            history.pushState(null, null, `${location.pathname}${anchor}`)
-          else location.hash = anchor
+        onComplete: () => {
+          this.modifyUrl(anchor)
         }
       })
     }

@@ -7,4 +7,6 @@ export default function() {
   this.namespace = 'api/home'
   this.get('/features')
   this.get('/employees')
+  this.get('/examples')
+  this.get('services')
 }

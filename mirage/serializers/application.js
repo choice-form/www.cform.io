@@ -9,6 +9,12 @@ export default JSONAPISerializer.extend({
     case 'employee':
       model.modelName = `home/${model.modelName}`
       break
+    case 'example':
+      model.modelName = `home/${model.modelName}`
+      break
+    case 'service':
+      model.modelName = `home/${model.modelName}`
+      break
     default: break
     }
     return JSONAPISerializer.prototype.typeKeyForModel.call(this, model)

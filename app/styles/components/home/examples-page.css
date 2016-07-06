@@ -1,0 +1,66 @@
+@import "../../common/variables.css";
+
+@media (--mobile) {
+  .pin-spacer {
+    display: none !important;
+  }
+}
+
+.anchors-wrapper {
+  background-color: color(white alpha(75%));
+  z-index: var(--z-over);
+}
+
+.anchors {
+  composes: wrapper unstyled-list from "../../common/helpers.css";
+  margin: auto;
+}
+
+.anchors li {
+  lost-column: 1/5 5 0;
+}
+
+.anchors li a {
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.wrapper:nth-of-type(2n + 1) {
+  background-color: gray(240);
+}
+
+.example {
+  composes: wrapper from "../../common/helpers.css";
+  lost-align: center;
+  height: 420px;
+}
+
+.content {
+  width: 80%;
+
+  @media (--tablet) {
+    padding: 2rem;
+  }
+}
+
+.content > div {
+  lost-column: 1/2 2 1rem;
+
+  @media (--mobile) {
+    lost-column: none;
+
+    &:first-child {
+      padding: 0 1rem;
+    }
+  }
+}
+
+.content figure {
+  margin: 0;
+  text-align: center;
+
+  & > img {
+    vertical-align: middle;
+  }
+}

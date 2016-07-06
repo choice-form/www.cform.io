@@ -8,4 +8,5 @@ export default function() {
   this.get('/features')
   this.get('/employees')
   this.get('/examples')
+  this.get('services')
 }

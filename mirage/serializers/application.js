@@ -1,22 +1,10 @@
+import Ember from 'ember'
 import { JSONAPISerializer } from 'ember-cli-mirage'
+
+const { dasherize, pluralize } = Ember.String
 
 export default JSONAPISerializer.extend({
   typeKeyForModel(model) {
-    switch (model.modelName) {
-    case 'feature':
-      model.modelName = `home/${model.modelName}`
-      break
-    case 'employee':
-      model.modelName = `home/${model.modelName}`
-      break
-    case 'example':
-      model.modelName = `home/${model.modelName}`
-      break
-    case 'service':
-      model.modelName = `home/${model.modelName}`
-      break
-    default: break
-    }
-    return JSONAPISerializer.prototype.typeKeyForModel.call(this, model)
+    return dasherize(pluralize(model.typeKey || model.modelName))
   }
 })

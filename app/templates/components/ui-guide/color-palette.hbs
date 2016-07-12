@@ -1,0 +1,64 @@
+<div local-class="wrapper">
+  {{#each colors as |color|}}
+    <section local-class="palette">
+      <div local-class="color" style={{color.styleContent}}></div>
+      <div local-class="info">
+        <div>RGB: {{color.origin}}</div>
+        <div>HEX: {{color.hexadecimal}}</div>
+      </div>
+    </section>
+  {{/each}}
+</div>
+
+{{#ui-guide/re-markdown presets="commonmark"}}
+  ### PostCSS 样式定义和引用
+
+  全部配色定义在 `app/styles/common/variables.css` 文件中：
+
+  ````less
+  :root {
+    --orange: rgb(244, 130, 0);
+    --yellow: rgb(255, 221, 32);
+    --green:  rgb(152, 195, 53);
+    --blue:   rgb(15, 203, 255);
+    --purple: rgb(102, 51, 204);
+  }
+  ````
+
+  引用时，`@import` 该文件的相对于 `app/styles/` 目录的路径，并使用 `var()` 函数进行变量的读取：
+
+  ````less
+  @import "common/variables.css";
+
+  .example {
+    color: var(--purple);
+  }
+  ````
+
+  **注意：**因为使用了 [cssnext](http://cssnext.io/)，因此我们可以利用 `color()` 及[其他辅助修改函数](https://github.com/postcss/postcss-color-function#list-of-color-adjuster)来帮助我们对配色进行微调，例如：
+
+  ````less
+  @import "common/variables.css";
+
+  .example {
+    color: color(var(--purple) tint(50%));
+    background-color: color(var(--blue) shade(25%));
+  }
+  ````
+
+  如果微调过的颜色会多次引用，为了便于重用，可以使用 CSS Modules 的 `@value` 指令创建本地的 alias：
+
+  ````less
+  @import "common/variables.css";
+
+  @value darker-blue: color(var(--blue) shade(25%));
+
+  .example-a {
+    background-color: darker-blue;
+  }
+
+  .example-b {
+    color: darker-blue;
+  }
+  ````
+{{/ui-guide/re-markdown}}

@@ -1,4 +1,4 @@
-<ul class={{styles.anchors}}>
+<ul local-class="anchors">
   {{#each features as |f|}}
     {{#with (concat "#feature" f.id) as |anchor|}}
       <li>
@@ -11,9 +11,9 @@
 </ul>
 
 {{#each features as |f|}}
-  <div class={{styles.wrapper}} id="feature{{f.id}}">
-    <div class={{styles.feature}}>
-      <section class={{styles.content}}>
+  <div local-class="wrapper" id="feature{{f.id}}">
+    <div local-class="feature">
+      <section local-class="content">
         <div>
           <h2>{{f.title}}</h2>
           <p>{{f.description}}</p>

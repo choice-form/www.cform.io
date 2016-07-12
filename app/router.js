@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 })
 
 Router.map(function() {
-  // 功能
+  // 特性
   this.route('features')
 
   // 案例
@@ -24,7 +24,12 @@ Router.map(function() {
   // 注册
   this.route('signup')
 
-  // 测试国际化
+  // UI Guide
+  this.route('ui-guide', {path: '/ui'}, function() {
+    this.route('ui-detail', {path: '/:name'})
+  })
+
+  // 国际化
   this.route('i18n')
 })
 

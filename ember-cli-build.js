@@ -6,7 +6,7 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     cssModules: {
       plugins: [
-        require('postcss-import')({path: './app'}),
+        require('postcss-import')({path: './app/styles'}),
         require('postcss-assets')({cachebuster: true, basePath: 'public/'}),
         require('postcss-cssnext')({warnForDuplicates: false}),
         require('rucksack-css')({fallbacks: true}),
@@ -71,6 +71,18 @@ module.exports = function(defaults) {
     app.import('bower_components/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
   }
   app.import('vendor/shims/scrollmagic.js')
+
+  // Remarkable
+  app.import({
+    development: 'bower_components/remarkable/dist/remarkable.js',
+    production: 'bower_components/remarkable/dist/remarkable.min.js'
+  })
+  app.import('vendor/shims/remarkable.js')
+
+  // highlight.js
+  app.import('vendor/highlight.js/highlight.pack.js')
+  app.import('vendor/highlight.js/styles/github.css')
+  app.import('vendor/shims/highlight.js')
 
   return app.toTree()
 }

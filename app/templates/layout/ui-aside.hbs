@@ -1,0 +1,14 @@
+<aside local-class="aside">
+  {{#each-in (group-by "type" model.widgets) as |type widgets|}}
+    <h3>{{type}}</h3>
+    <ol>
+      {{#each widgets as |widget|}}
+        <li>
+          {{#link-to 'ui-guide.ui-detail' widget}}
+            {{widget.text}}
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ol>
+  {{/each-in}}
+</aside>

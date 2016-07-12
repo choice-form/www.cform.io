@@ -1,18 +1,18 @@
-<div class={{styles.banner}}>
+<div local-class="banner">
   <h1>©️  {{link-to "Company" "index" tagName="small"}}</h1>
 
   <nav class={{menuVisibility}}>
-    <div class={{styles.primary}} role="menu">
+    <div local-class="primary" role="menu">
       {{link-to "Features" "features"}}
       {{link-to "Examples" "examples"}}
       {{link-to "Services" "services"}}
       {{link-to "Blog" "index"}}
     </div>
-    <div class={{styles.session}} role="menu">
+    <div local-class="session" role="menu">
       <a href="/signin">Sign in</a>
       <a href="/signup">Create an account</a>
     </div>
   </nav>
 
-  {{ui/hamburger-menu class=(get this "styles.hamburger-menu") isMenuShown=(mut isMenuShown)}}
+  {{ui/hamburger-menu class=(unbound styles.hamburger-menu) isMenuShown=(mut isMenuShown)}}
 </div>

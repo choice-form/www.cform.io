@@ -1,0 +1,36 @@
+@import "common/variables.css";
+
+.wrapper {
+  clear: fix;
+}
+
+.palette {
+  lost-waffle: 1/5;
+  background-color: white;
+  box-shadow: 0 3px 9px 0 gray(150);
+  transition: transform .2s;
+
+  @media (--laptop) {
+    lost-waffle: 1/4;
+  }
+
+  @media (--tablet) {
+    lost-waffle: 1/3;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: crosshair;
+    transform: translateY(-1%);
+  }
+}
+
+.color {
+  padding: 50% 0;
+}
+
+.info {
+  padding: 1rem 0.75rem;
+  font-size: 0.875rem;
+  color: #697e8e;
+}

@@ -1,18 +1,18 @@
-<div class={{styles.background}}>
+<div local-class="background">
   <img src={{currentBackground}}/>
 </div>
 
-<div class={{styles.wrapper}}>
-  <div class="swiper-container {{styles.container}}">
+<div local-class="wrapper">
+  <div class="swiper-container" local-class="container">
     <div class="swiper-wrapper">
       {{#each examples as |e|}}
-        <section class="swiper-slide {{styles.slide}}">
+        <section class="swiper-slide" local-class="slide">
           <h2>{{e.title}}</h2>
           <p>{{e.description}}</p>
           {{link-to "Go To Example" "examples" class=styles.button}}
         </section>
       {{/each}}
     </div>
-    <div class={{styles.pagination}}></div>
+    <div local-class="pagination"></div>
   </div>
 </div>

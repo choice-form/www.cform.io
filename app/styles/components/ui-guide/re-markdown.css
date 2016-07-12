@@ -1,0 +1,27 @@
+@import "common/variables.css";
+
+@value code-background: color(#dee5e8 tint(50%));
+
+.re-markdown {
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: white;
+}
+
+.re-markdown p :any-link {
+  color: color(#2196f3 shade(10%));
+}
+
+.re-markdown p code {
+  position: relative;
+  top: -1px;
+  border-radius: 0.1rem;
+  padding: 0.1rem 0.3rem;
+  background-color: code-background;
+  color: #0d47a1;
+}
+
+.re-markdown pre {
+  padding: 1rem;
+  background-color: code-background;
+}

@@ -12,6 +12,8 @@ Ember.Route.reopen({
 
     if (/.*(loading|error)$/.test(this.routeName)) return
 
+    if (/^ui-/.test(this.routeName)) return
+
     if (this.get('hasLayout')) {
       this.render('layout/header', {
         into: 'application', outlet: 'header', controller: 'layout'

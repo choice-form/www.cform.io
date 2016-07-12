@@ -1,0 +1,33 @@
+.wrapper {
+  composes: wrapper from "./common/helpers.css";
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+
+  & > small {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #637283;
+  }
+}
+
+.aside {
+  color: #697e8e;
+  lost-column: 1/4 2 2rem;
+}
+
+.aside h3 {
+  border-bottom: 1px solid #afbaca;
+}
+
+.aside ol {
+  padding-left: 2.75rem;
+  list-style-type: decimal-leading-zero;
+
+  & > li {
+    padding: 0.25rem 0.5rem;
+  }
+}

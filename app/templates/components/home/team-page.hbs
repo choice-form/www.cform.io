@@ -2,11 +2,11 @@
 
 <div>
   {{#each employees as |employee|}}
-    <section class={{styles.employee}}>
-      <div class={{styles.avatar}}><img src={{employee.avatar}} title={{employee.name}}/></div>
-      <div class={{styles.name}}>{{employee.name}}</div>
-      <div class={{styles.title}}><strong>{{employee.title}}</strong></div>
-      <div class={{styles.intro}}>{{employee.intro}}</div>
+    <section local-class="employee">
+      <div local-class="avatar"><img src={{employee.avatar}} title={{employee.name}}/></div>
+      <div local-class="name">{{employee.name}}</div>
+      <div local-class="title"><strong>{{employee.title}}</strong></div>
+      <div local-class="intro">{{employee.intro}}</div>
     </section>
   {{/each}}
 </div>

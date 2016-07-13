@@ -1,6 +1,6 @@
 {
   "name": "homeland",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "www.cform.io",
   "private": true,
   "directories": {
@@ -16,11 +16,11 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "余凡 <albert@cform.io>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.4",
-    "cssnano": "^3.7.0",
+    "cssnano": "^3.7.3",
     "d3-ease": "^1.0.0",
     "ember-ajax": "^2.4.0",
     "ember-browserify": "^1.1.10",

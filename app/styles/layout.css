@@ -3,6 +3,10 @@
 .banner {
   color: white;
   background-color: var(--purple);
+
+  & .wrapper {
+    padding: 1rem;
+  }
 }
 
 .wrapper {
@@ -27,7 +31,7 @@ nav {
   @media(--mobile) {
     lost-column: none;
     z-index: var(--z-menu);
-    position: absolute 48px 0 auto;
+    position: absolute 80px 0 auto;
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top;
@@ -76,6 +80,20 @@ nav .session {
     & :any-link {
       lost-column: 1/2 0 0;
     }
+  }
+}
+
+.signup {
+  composes: button button-primary from "homeland/styles/common/helpers.css";
+}
+
+nav :any-link.signup {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 1rem;
+
+  @media (--mobile) {
+    margin-left: 0;
   }
 }
 

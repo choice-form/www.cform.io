@@ -1,3 +1,5 @@
+@import "common/variables.css";
+
 .wrapper {
   clear: fix;
   position: relative;
@@ -12,6 +14,21 @@
 
   @media (width > 1200px) {
     lost-center: 1200px;
+  }
+}
+
+.button {
+  padding: 6px 1rem;
+  transition: all .2s;
+}
+
+.button-primary {
+  color: white;
+  background-color: var(--orange);
+
+  &:hover,
+  &:focus {
+    background-color: color(var(--orange) shade(5%));
   }
 }
 

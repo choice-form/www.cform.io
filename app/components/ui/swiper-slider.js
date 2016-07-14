@@ -1,8 +1,5 @@
-import Ember from 'ember'
 import Component from 'ember-component'
 import Swiper from 'swiper'
-
-const { assign, isPresent } = Ember
 
 export default Component.extend({
   classNames: ['swiper-container'],
@@ -17,7 +14,7 @@ export default Component.extend({
       {key: 'scrollbar', value: '.swiper-scrollbar'}
     ].forEach(option => {
       const { options } = this.attrs
-      
+
       if (options[option.key]) {
         if (option.value === options[option.key]) {
           this.set(`$${option.key}`, option.value.slice(1))
@@ -32,7 +29,7 @@ export default Component.extend({
 
   didInsertElement() {
     this._super(...arguments)
-    this.$slider = new Swiper(this.element, this.attrs.options)
+    this.$slider = new Swiper(this.element, this.attrs.options || {})
   },
 
   willDestroyElement() {

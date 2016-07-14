@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('ui-guide/typograph-standard', '继承测试 | 组件 | ui guide/typograph-standard', {
+moduleForComponent('ui-guide/typograph-standard', '集成测试 | 组件 | ui guide/typograph-standard', {
   integration: true
 });
 

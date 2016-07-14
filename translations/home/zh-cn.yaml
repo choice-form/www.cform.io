@@ -2,3 +2,5 @@ home:
   showcase:
     description: "科技改善生活，服务改变效率。<br />选择决定你的方式。"
     know-more: "了解更多 〉"
+  example-slides:
+    see-it-in-action: "查看案例"

@@ -1,16 +1,23 @@
-<!-- <div local-class="background"><img src={{currentBackground}} /></div> -->
-
 <div local-class="wrapper">
-  <div class="swiper-container" local-class="container">
-    <div class="swiper-wrapper">
-      {{#each examples as |e|}}
-        <section class="swiper-slide" local-class="slide">
-          <h2>{{e.title}}</h2>
-          <p>{{e.description}}</p>
-          {{link-to "Go To Example" "examples" class=styles.button}}
-        </section>
-      {{/each}}
-    </div>
-    <div local-class="pagination"></div>
-  </div>
+  {{#ui/swiper-slider
+     options=(hash
+     autoplay=1000
+     effect="fade" fade=(hash crossFade=true)
+     grabCursor=true
+     nextButton=".swiper-button-next"
+     prevButton=".swiper-button-prev"
+     pagination=(concat "." styles.pagination)
+     paginationClickable=true
+     speed=1000)
+  }}
+    {{#each examples as |example|}}
+      <section class="swiper-slide" local-class="slide">
+        <h2>{{example.title}}</h2>
+        <p>{{example.description}}</p>
+        {{#link-to "examples" local-class="button"}}
+          {{t "home.example-slides.see-it-in-action"}}
+        {{/link-to}}
+      </section>
+    {{/each}}
+  {{/ui/swiper-slider}}
 </div>

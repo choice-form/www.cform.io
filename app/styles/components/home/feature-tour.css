@@ -6,7 +6,10 @@
 
 .wrapper {
   composes: wrapper from "../../common/helpers.css";
-
+  min-height: calc(100vh);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
   @media (--mobile) {
     text-align: center;
   }

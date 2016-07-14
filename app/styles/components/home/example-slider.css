@@ -1,49 +1,11 @@
 @import "common/variables.css";
 
 .examples {
-  position: relative;
-}
-
-.background {
-  overflow: hidden;
-}
-
-.background img {
-  max-width: 100%;
-
-  @media (--mobile) {
-    max-width: 175%;
-  }
+  min-height: calc(100vh);
 }
 
 .wrapper {
-  position: absolute 0 0 0 0;
-  margin: auto;
-  padding: 2rem;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  transform: translateX(54%);
-  box-shadow: 0 0 5px 0 gray(200);
-
-  @media (--mobile) {
-    padding: 1rem;
-    background-color: transparent;
-    transform: translateX(0);
-  }
-
-  @media (--desktop) {
-    width: 520px;
-    height: 520px;
-  }
-  @media (--laptop) {
-    width: 420px;
-    height: 420px;
-  }
-  @media (--tablet) {
-    width: 320px;
-    height: 320px;
-  }
+  composes: wrapper from "homeland/styles/common/helpers.css";
 }
 
 .container {
@@ -63,17 +25,6 @@
 }
 
 .slide {
-  @media (--desktop) {
-    height: 420px;
-  }
-
-  @media (--laptop) {
-    height: 320px;
-  }
-
-  @media (--tablet) {
-    height: 240px;
-  }
 }
 
 .pagination {

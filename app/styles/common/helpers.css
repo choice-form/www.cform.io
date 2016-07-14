@@ -23,8 +23,11 @@
 }
 
 .button-primary {
+  display: inline-block;
+  padding: 6px 1rem;
   color: white;
   background-color: var(--orange);
+  text-decoration: none;
 
   &:hover,
   &:focus {

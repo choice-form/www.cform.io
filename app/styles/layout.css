@@ -20,6 +20,7 @@
 
   @media (--mobile) {
     lost-column: none;
+    padding-right: 0.5rem;
     text-align: right;
   }
 }
@@ -60,7 +61,7 @@ nav {
 
 nav .primary {
   lost-column: 3/5 0 0;
-  text-align: right;
+  text-align: center;
 
   @media (--mobile) {
     lost-column: none;
@@ -88,8 +89,8 @@ nav .session {
 }
 
 nav :any-link.signup {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-left: 1rem;
 
   @media (--mobile) {

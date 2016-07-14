@@ -1,12 +1,9 @@
 <div local-class="wrapper">
   <section>
-    <header local-class="slogan">form follows choice</header>
-    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+    <header local-class="slogan">{{t "application.slogan"}}</header>
+    <p>{{{t "home.showcase.description"}}}</p>
     <div>
-      {{link-to "Let's get start!" "signup" class=styles.get-start}}
-    </div>
-    <div>
-      <button type="button" local-class="play-video"></button>
+      {{link-to (t "home.showcase.know-more") "signup" local-class="know-more"}}
     </div>
   </section>
 </div>

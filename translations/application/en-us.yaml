@@ -1,11 +1,13 @@
 application:
   brand: 'choice form'
+  slogan: "form follows choice"
   primary-menu:
-    features: "Features"
-    examples: "Examples"
-    services: "Services"
-    articles: "Blog"
+    features: "features"
+    examples: "examples"
+    services: "services"
+    prices: "prices"
+    articles: "blog"
   secondary-menu:
-    signin: "Sign in"
-    signup: "Create an account"
+    signin: "sign in"
+    signup: "create an account"
   copyright: "&copy; 2016 choice form. All rights reserved"

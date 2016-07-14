@@ -1,9 +1,11 @@
 application:
   brand: "巧思"
+  slogan: "form follows choice"
   primary-menu:
     features: "特性"
     examples: "案例"
     services: "服务"
+    prices: "价格"
     articles: "博客"
   secondary-menu:
     signin: "登录"

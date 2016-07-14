@@ -7,12 +7,11 @@
 
 .wrapper {
   lost-align: center;
-  min-height: 40rem;
-  text-align: center;
+  min-height: calc(100vh - 80px);
 }
 
 .wrapper section {
-  width: 75%;
+  width: 67%;
 }
 
 .slogan {
@@ -21,18 +20,15 @@
   line-height: 2;
 
   & + p {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     font-size: responsive 1.2rem 1.8rem;
   }
 }
 
-.get-start {
+.know-more {
+  composes: button button-primary from "homeland/styles/common/helpers.css";
   display: inline-block;
-  margin-bottom: 3rem;
-  padding: 13px 3rem 15px;
-  color: white;
-  background-color: var(--orange);
-  text-decoration: none;
+  padding: 12px 3rem;
 }
 
 .play-video {

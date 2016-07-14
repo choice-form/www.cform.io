@@ -1,2 +1,11 @@
 application:
-  brand: '巧思'
+  brand: "巧思"
+  primary-menu:
+    features: "特性"
+    examples: "案例"
+    services: "服务"
+    articles: "博客"
+  secondary-menu:
+    signin: "登录"
+    signup: "创建新账号"
+  copyright: "&copy; 2016 choice form. 版权所有"

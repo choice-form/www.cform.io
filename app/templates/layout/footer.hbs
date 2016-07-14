@@ -1,16 +1,18 @@
-<div local-class="footer">
-  <p local-class="slogan">form follows choice</p>
+<footer local-class="footer">
+  <div local-class="wrapper">
+    <p local-class="slogan">form follows choice</p>
 
-  <ul local-class="languages">
-    <li><small>{{link-to "中文" "i18n" (query-params code="zh-cn")}}</small></li>
-    <li>{{link-to "En" "i18n" (query-params code="en-us")}}</li>
-  </ul>
+    <ul local-class="languages">
+      <li><small>{{link-to "中文" "i18n" (query-params code="zh-cn")}}</small></li>
+      <li>{{link-to "En" "i18n" (query-params code="en-us")}}</li>
+    </ul>
 
-  <ul local-class="social-links">
-    <li>F</li>
-    <li>G</li>
-    <li>T</li>
-  </ul>
+    <ul local-class="social-links">
+      <li>F</li>
+      <li>G</li>
+      <li>T</li>
+    </ul>
 
-  <p local-class="copyright"><small>&copy; 2016 choice form. All rights reserved</small></p>
-</div>
+    <p local-class="copyright"><small>{{{t "application.copyright"}}}</small></p>
+  </div>
+</footer>

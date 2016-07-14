@@ -1,34 +1,27 @@
 @import "common/variables.css";
 
-header[role="banner"] {
+.banner {
   color: white;
   background-color: var(--purple);
 }
 
-.banner {
-  composes: wrapper from "./common/helpers.css";
+.wrapper {
+  composes: wrapper from "homeland/styles/common/helpers.css";
 }
 
-.banner h1 {
+.brand {
   lost-column: 1/4 0 0;
   margin: 0;
+  cursor: pointer;
 
   @media (--mobile) {
     lost-column: none;
-    float: right !important;
-  }
-
-  & > small {
-    display: inline-block;
-    cursor: pointer;
-    font-size: .67em;
-    transform: translateY(-3px);
+    text-align: right;
   }
 }
 
-.banner nav {
-  clear: fix;
-  lost-column: 3/4 4 0;
+nav {
+  lost-column: 3/4 0 0;
   background-color: var(--purple);
 
   @media(--mobile) {
@@ -45,19 +38,34 @@ header[role="banner"] {
       transform: scaleY(1);
     }
   }
-}
 
-.banner .primary {
-  lost-column: 3/5 0 0;
+  & :any-link {
+    display: inline-block;
+    padding: 12px .5rem;
+    color: white;
+    font-weight: bold;
+    text-decoration-line: none;
 
-  @media (--mobile) {
-    lost-column: none;
-    border-bottom: 1px solid white;
-    padding-bottom: .75em;
+    @media (--mobile) {
+      display: block;
+      padding: .75em 0;
+      text-align: center;
+    }
   }
 }
 
-.banner .session {
+nav .primary {
+  lost-column: 3/5 0 0;
+  text-align: right;
+
+  @media (--mobile) {
+    lost-column: none;
+    padding-bottom: .75em;
+    border-bottom: 1px solid white;
+  }
+}
+
+nav .session {
   clear: fix;
   lost-column: 2/5 0 0;
   text-align: right;
@@ -71,19 +79,6 @@ header[role="banner"] {
   }
 }
 
-.banner nav :any-link {
-  display: inline-block;
-  padding: 12px .5rem;
-  color: white;
-  text-decoration-line: none;
-
-  @media (--mobile) {
-    display: block;
-    padding: .75em 0;
-    text-align: center;
-  }
-}
-
 .hamburger-menu {
   display: none;
 
@@ -92,13 +87,9 @@ header[role="banner"] {
   }
 }
 
-footer[role="footer"] {
+.footer {
   color: white;
   background-color: var(--block-background);
-}
-
-.footer {
-  composes: wrapper from "./common/helpers.css";
 }
 
 .slogan {

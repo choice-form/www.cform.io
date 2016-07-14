@@ -1,2 +1,11 @@
 application:
-  brand: 'Choice Form'
+  brand: 'choice form'
+  primary-menu:
+    features: "Features"
+    examples: "Examples"
+    services: "Services"
+    articles: "Blog"
+  secondary-menu:
+    signin: "Sign in"
+    signup: "Create an account"
+  copyright: "&copy; 2016 choice form. All rights reserved"

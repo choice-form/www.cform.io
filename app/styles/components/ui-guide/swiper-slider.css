@@ -6,7 +6,7 @@
 
 .demo {
   width: 100%;
-  height: 320px;
+  height: 100%;
 }
 
 .demo-slide {
@@ -16,6 +16,11 @@
   font-size: 1.125rem;
   text-align: center;
   background-color: white;
+}
+
+.demo-slide img {
+  width: 100%;
+  vertical-align: middle;
 }
 
 .demo-pagination :global(.swiper-pagination-bullet) {

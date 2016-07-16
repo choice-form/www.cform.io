@@ -10,7 +10,8 @@
 
 body {
   margin: 0;
-  font-family: Kiro, Helvetica Neue, Helvetica, Arial, Pingfang SC, STHeiti, Microsoft YaHei, 微软雅黑, sans-serif;
+  font-family: Kiro, "Helvetica Neue", Helvetica, Arial, "Pingfang SC", STHeiti,
+               "Microsoft YaHei", 微软雅黑, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;

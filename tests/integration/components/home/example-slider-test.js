@@ -10,8 +10,7 @@ test('正确渲染', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   // TODO: write the real test
-  this.set('examples', [{background: ''}])
-  this.render(hbs`{{home/example-slider examples=examples}}`);
+  this.render(hbs`{{home/example-slider}}`);
 
   assert.equal(this.$().length, 1);
 });

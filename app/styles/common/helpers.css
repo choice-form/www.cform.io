@@ -19,7 +19,10 @@
 
 .button {
   padding: 6px 1rem;
+  background-color: white;
+  border-width: 0;
   transition: all .2s;
+  cursor: pointer;
 }
 
 .button-primary {

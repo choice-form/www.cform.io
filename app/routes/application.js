@@ -8,6 +8,6 @@ export default Ember.Route.extend({
   beforeModel() {
     const navigator = window.navigator
     this.set('locale', navigator.language || navigator.userLanguage)
-    this.get('intl').setLocale(this.get('locale'))
+    return this.get('intl').setLocale(this.get('locale'))
   },
 })

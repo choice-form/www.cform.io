@@ -15,7 +15,7 @@ export default Component.extend({
     ].forEach(option => {
       const { options } = this.attrs
 
-      if (options[option.key]) {
+      if (options && options[option.key]) {
         if (option.value === options[option.key]) {
           this.set(`$${option.key}`, option.value.slice(1))
         } else {
@@ -29,13 +29,13 @@ export default Component.extend({
 
   didInsertElement() {
     this._super(...arguments)
-    this.$slider = new Swiper(this.element, this.attrs.options || {})
+    this.$swiper = new Swiper(this.element, this.attrs.options || {})
   },
 
   willDestroyElement() {
     this._super(...arguments)
-    this.$slider.detachEvents()
-    this.$slider.destroy(true, true)
-    delete this.$slider
+    this.$swiper.detachEvents()
+    this.$swiper.destroy(true, true)
+    delete this.$swiper
   }
 })

@@ -1,0 +1,323 @@
+{{#ui-guide/re-markdown}}
+  ### 简介
+
+  `ui/swiper-slider` 封装了 [Swiper 插件](http://idangero.us/swiper/)，提供了及其丰富的幻灯片、视差控制以及虚拟滚动容器等控制接口。
+
+  [Swiper 官网提供了完整的 Demo 演示页面](http://idangero.us/swiper/demos/#.V4heCWR95Fy)，下面是其中一个 Demo 的组件使用演示：
+
+  ```htmlbars
+  \{{#ui/swiper-slider local-class="demo" options=(hash
+    nextButton=".swiper-button-next"
+    prevButton=".swiper-button-prev"
+    pagination=".swiper-pagination"
+    paginationType="progress"
+    autoplay=2000
+    spaceBetween=50
+    centeredSlides=true
+    )}}
+    \{{!-- 拥有集合数据的时候可以直接使用 each 去遍历 --}}
+    <div class="swiper-slide">Slide 1</div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+    <div class="swiper-slide">Slide 4</div>
+    <div class="swiper-slide">Slide 5</div>
+    <div class="swiper-slide">Slide 6</div>
+    <div class="swiper-slide">Slide 7</div>
+    <div class="swiper-slide">Slide 8</div>
+    <div class="swiper-slide">Slide 9</div>
+    <div class="swiper-slide">Slide 10</div>
+  \{{/ui/swiper-slider}}
+  ```
+{{/ui-guide/re-markdown}}
+
+<h3>Demo 1</h3>
+
+<section class="demo-wrapper">
+  {{#ui/swiper-slider local-class="demo" options=(hash
+    nextButton=".swiper-button-next"
+    prevButton=".swiper-button-prev"
+    pagination=".swiper-pagination"
+    paginationType="progress"
+    autoplay=2000
+    spaceBetween=50
+    centeredSlides=true
+    )}}
+    <div class="swiper-slide" local-class="demo-slide">Slide 1</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 2</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 3</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 4</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 5</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 6</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 7</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 8</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 9</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 10</div>
+  {{/ui/swiper-slider}}
+</section>
+
+{{#ui-guide/re-markdown}}
+  ### 基本用法
+
+  Swiper 插件需要的基本 HTML 结构如下：
+
+  ```html
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide Content</div>
+      <!-- ... -->
+    </div>
+
+    <!-- 如果需要前后／上下翻页： -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- 如果需要显示分页／进度： -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要虚拟滚动控制： -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+  ```
+
+  `ui/swiper-slider` 组件已经封装了除 `.swiper-slide` 以外的全部 HTML 元素，所以只需要提供具体的 `.swiper-slide` 就可以了（如上面的 Demo 所示）。
+
+  组件通过 `options` 参数传递初始化 Swiper 需要的选项，`options` 是一个 _hash_，其中的一些元素会决定组件要不要显示额外的 HTML 结构，比如 _pagination_ 等。
+
+  所有的参数可以直接参考 [Swiper 的 API 文档](http://idangero.us/swiper/api/#.V4hsyGR95Fw)。
+
+  ### 样式控制
+
+  Swiper 自带一套标准的样式，都是以 `swiper-` 开头的样式类名。**因为这些样式是作用于全局的，所以千万不要去修改或覆盖它们！** 如果你需要自定义样式，可以通过传递 CSS Modules 样式类来做。
+
+  举例，假设我们在 `my-page` 模板里引用了 `ui/swiper-slider` 组件，那么我们可以在 `app/styles/my-page.css` 定义样式，然后传递给 `ui/swiper-slider`：
+
+  ```css
+  /* app/styles/my-page.css */
+
+  .custom-slider {
+    /* ... */
+  }
+  ```
+
+  ```htmlbars
+  \{{!-- app/templates/my-page.hbs --}}
+
+  \{{#ui/swiper-slider local-class="custom-slider"}}
+    \{{!-- ... --}}
+  \{{/ui/swiper-slider}}
+  ```
+
+  于是，我们可以得到这样的 DOM：
+
+  ```html
+  <div class="_custom-slider-1_152d8u swiper-container">...</div>
+  ```
+
+  这样，`.custom-slider` 便可以作为命名空间来帮助我们定制 Swiper 的样式了。当在 CSS Modules 内部修改全局样式的时候要注意使用 `:global` 函数，例如：
+
+  ```css
+  /* app/styles/my-page.css */
+
+  .custom-slider {
+    /* ... */
+  }
+
+  .custom-slider :global(.swiper-wrapper) {
+    /* 这里我们可以去覆盖 .swiper-wrapper 的样式 */
+  }
+  ```
+
+  下面这个例子演示了用自定义的分页样式来替换默认的样子：
+
+  ```htmlbars
+  \{{#ui/swiper-slider local-class="demo" options=(hash
+    pagination=(concat "." styles.demo-pagination)
+    paginationClickable=true
+    grabCursor=true
+    spaceBetween=50
+    centeredSlides=true
+    )}}
+    \{{!-- ... --}}
+  \{{/ui/swiper-slider}}
+  ```
+
+  ```css
+  .demo-pagination :global(.swiper-pagination-bullet) {
+    width: 16px;
+    height: 16px;
+    background-color: var(--purple);
+    transition: .1s;
+  }
+
+  .demo-pagination :global(.swiper-pagination-bullet-active) {
+    border: 4px solid var(--purple);
+    background-color: white;
+  }
+  ```
+
+  实际的渲染结果如下所示：
+{{/ui-guide/re-markdown}}
+
+<h3>Demo 2</h3>
+
+<section class="demo-wrapper">
+  {{#ui/swiper-slider local-class="demo" options=(hash
+    pagination=(concat "." styles.demo-pagination)
+    paginationClickable=true
+    grabCursor=true
+    spaceBetween=50
+    centeredSlides=true
+    )}}
+    <div class="swiper-slide" local-class="demo-slide">Slide 1</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 2</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 3</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 4</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 5</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 6</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 7</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 8</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 9</div>
+    <div class="swiper-slide" local-class="demo-slide">Slide 10</div>
+  {{/ui/swiper-slider}}
+</section>
+
+{{#ui-guide/re-markdown}}
+  这里比较难以理解的是组件传参时写的一句：`pagination=(concat "." styles.demo-pagination)`，
+
+  `styles.demo-pagination` 是 CSS Modules 生成的样式类名的对象引用，通过它我们可以得到诸如 `_demo-pagination_152d8u` 这样的结果，但是 `pagination` 要的是一个 CSS Selector，所以我们还需要使用 `concat` 来生成最终的 `._demo-pagination_152d8u`。
+
+  但为什么不直接用 `.swiper-pagination` 呢？这是因为每一个 Swiper 实例都有对应独立的 _pagination_ / _prev/next buttons_ / _scrollbar_ 的控制，如果在同一时刻存在两个以上的 Swiper 实例，那么指定一样的样式类名会造成行为冲突。这是我们在实际应用中会碰到的问题，请格外小心。
+
+  ### 行为控制
+
+  Swiper 提供了许多交互 API 供我们进一步的控制它的行为，实现复杂精细的 UI 交互。`ui/swiper-slider` 组件可以接收来自外部的 `action` 并正确处理这些动作。
+
+  在下面的例子中，_Go Prev_ 和 _Go Next_ 两个按钮是独立于 `ui/swiper-slider` 组件之外的，但我们需要用它们来控制幻灯片的前进和后退。
+
+  Swiper 提供了 `onInit(swiper)` 回调在其完成初始化之后将实例对象传递进来，因此我们可以在外层定义一个 _action_ 作为该回调函数来接收 _swiper_ 实例：
+
+  ```htmlbars
+  \{{!-- 假设在 app/templates/components/my-component.hbs 模板中： --}}
+  \{{#ui/swiper-slider options=(hash
+    ...
+    onInit=(action "initSwiper" "mySwiper")
+    }}
+    ...
+  \{{/ui/swiper-slider}}
+  ```
+
+  ```javascript
+  export defaults Component.extend({
+    actions: {
+      initSwiper(name, instance) {
+        this.set(name, instance)
+      }
+    }
+  })
+  ```
+
+  现在 `my-component` 对象就获得了叫做 `mySwiper` 的 _swiper_ 实例对象，接着我们给按钮绑定 _action_ 来调用 Swiper 的方法：
+
+  ```htmlbars
+  \{{#ui/swiper-slider options=(hash
+    ...
+    onInit=(action "initSwiper" "mySwiper")
+    }}
+    ...
+  \{{/ui/swiper-slider}}
+
+  <button type="button" onclick="action 'slideTo' 'mySwiper' 'prev'">Go Prev</button>
+  <button type="button" onclick="action 'slideTo' 'mySwiper' 'next'">Go Next</button>
+  <!-- 因为无法转义内嵌在 HTML 里的 handlebars 符号，所以上面用了 "" 来替代大括号 \{{ 和 }} -->
+  ```
+
+  ```javascript
+  export defaults Component.extend({
+    actions: {
+      slideTo(name, direction) {
+        const method = `slide${Ember.String.capitalize(direction)}`
+        this.get(name)[method]()
+      }
+    }
+  })
+  ```
+
+  以此为例，我们便可以访问 Swiper 实例的所有属性和方法了，详细列表请参考 [Swiper 的 API 文档](http://idangero.us/swiper/api/#.V4hsyGR95Fw)。
+{{/ui-guide/re-markdown}}
+
+<section class="demo-wrapper">
+  {{#ui/swiper-slider local-class="demo" options=(hash
+    preloadImages=false
+    lazyLoading=true
+    loop=true
+    spaceBetween=50
+    centeredSlides=true
+    onInit=(action "initSwiper")
+    )}}
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/1">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/2">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/3">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/4">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/5">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/6">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/7">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/8">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/9">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/10">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+  {{/ui/swiper-slider}}
+</section>
+
+<button type="button" local-class="button" onclick={{action "slideTo" 'swiper' 'prev'}}>Go Prev</button>
+<button type="button" local-class="button" onclick={{action "slideTo" 'swiper' 'next'}}>Go Next</button>
+
+{{#ui-guide/re-markdown presets="commonmark"}}
+  ### 图片延迟加载
+
+  上个例子同时演示了 Swiper 一个很贴心的功能，即延迟加载幻灯片图片。下面是对应的代码：
+
+  ```htmlbars
+  \{{#ui/swiper-slider local-class="demo" options=(hash
+    preloadImages=false
+    lazyLoading=true
+    ...
+    )}}
+    <div class="swiper-slide" local-class="demo-slide">
+      <img class="swiper-lazy" data-src="http://lorempixel.com/900/320/city/1">
+      <div class="swiper-lazy-preloader"></div>
+    </div>
+    ...
+  \{{/ui/swiper-slider}}
+  ```
+
+  **延迟加载（Lazy Loading）和预加载（PreLoading）不是一个概念，做延迟加载的时候要禁用预加载：`preloadImages=false`。**
+{{/ui-guide/re-markdown}}

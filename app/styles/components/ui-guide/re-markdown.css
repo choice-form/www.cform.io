@@ -3,7 +3,7 @@
 @value code-background: color(#dee5e8 tint(50%));
 
 .re-markdown {
-  margin: 3rem 0;
+  margin: 2rem 0;
   padding: 2rem;
   background-color: white;
 }

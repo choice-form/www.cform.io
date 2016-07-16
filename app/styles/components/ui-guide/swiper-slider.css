@@ -1,0 +1,31 @@
+@import "common/variables.css";
+
+.button {
+  composes: button from "homeland/styles/common/helpers.css";
+}
+
+.demo {
+  width: 100%;
+  height: 320px;
+}
+
+.demo-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  text-align: center;
+  background-color: white;
+}
+
+.demo-pagination :global(.swiper-pagination-bullet) {
+  width: 16px;
+  height: 16px;
+  background-color: var(--purple);
+  transition: .1s;
+}
+
+.demo-pagination :global(.swiper-pagination-bullet-active) {
+  border: 4px solid var(--purple);
+  background-color: white;
+}

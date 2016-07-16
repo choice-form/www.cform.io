@@ -1,4 +1,9 @@
 .wrapper {
-  composes: wrapper from "./common/helpers.css";
+  composes: wrapper from "homeland/styles/common/helpers.css";
   clear: fix;
+}
+
+:global(.demo-wrapper) {
+  margin-bottom: 2rem;
+  box-shadow: 0 0.5rem 1rem 0 color(black alpha(10%));
 }

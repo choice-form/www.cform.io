@@ -1,5 +1,5 @@
 .wrapper {
-  composes: wrapper from "./common/helpers.css";
+  composes: wrapper from "homeland/styles/common/helpers.css";
   padding-top: 1rem;
   padding-bottom: 1rem;
 }

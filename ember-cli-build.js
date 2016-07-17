@@ -33,9 +33,6 @@ module.exports = function(defaults) {
     production: 'bower_components/Swiper/dist/css/swiper.min.css'
   })
   app.import('bower_components/Swiper/dist/js/swiper.min.js')
-  if (app.env === 'development') {
-    app.import('bower_components/Swiper/dist/js/maps/swiper.min.js.map')
-  }
   app.import('vendor/shims/swiper.js')
 
   // GSAP

@@ -1,12 +1,12 @@
 {{#ui-guide/re-markdown}}
   ### 简介
 
-  `ui/swiper-slider` 封装了 [Swiper 插件](http://idangero.us/swiper/)，提供了及其丰富的幻灯片、视差控制以及虚拟滚动容器等控制接口。
+  `ui/swiper-carousel` 封装了 [Swiper 插件](http://idangero.us/swiper/)，提供了及其丰富的幻灯片、视差控制以及虚拟滚动容器等控制接口。
 
   [Swiper 官网提供了完整的 Demo 演示页面](http://idangero.us/swiper/demos/#.V4heCWR95Fy)，下面是其中一个 Demo 的组件使用演示：
 
   ```htmlbars
-  \{{#ui/swiper-slider local-class="demo" options=(hash
+  \{{#ui/swiper-carousel local-class="demo" options=(hash
     nextButton=".swiper-button-next"
     prevButton=".swiper-button-prev"
     pagination=".swiper-pagination"
@@ -18,14 +18,14 @@
     \{{!-- 拥有集合数据的时候可以直接使用 each 去遍历 --}}
     <div class="swiper-slide"><img src="..."></div>
     ...
-  \{{/ui/swiper-slider}}
+  \{{/ui/swiper-carousel}}
   ```
 {{/ui-guide/re-markdown}}
 
 <h3>Demo 1</h3>
 
 <section class="demo-wrapper">
-  {{#ui/swiper-slider local-class="demo" options=(hash
+  {{#ui/swiper-carousel local-class="demo" options=(hash
     nextButton=".swiper-button-next"
     prevButton=".swiper-button-prev"
     pagination=".swiper-pagination"
@@ -64,7 +64,7 @@
     <div class="swiper-slide" local-class="demo-slide">
       <img src="https://d13yacurqjgara.cloudfront.net/users/179241/screenshots/1879013/nerd_dribbble.png">
     </div>
-  {{/ui/swiper-slider}}
+  {{/ui/swiper-carousel}}
 </section>
 
 {{#ui-guide/re-markdown}}
@@ -91,7 +91,7 @@
   </div>
   ```
 
-  `ui/swiper-slider` 组件已经封装了除 `.swiper-slide` 以外的全部 HTML 元素，所以只需要提供具体的 `.swiper-slide` 就可以了（如上面的 Demo 所示）。
+  `ui/swiper-carousel` 组件已经封装了除 `.swiper-slide` 以外的全部 HTML 元素，所以只需要提供具体的 `.swiper-slide` 就可以了（如上面的 Demo 所示）。
 
   组件通过 `options` 参数传递初始化 Swiper 需要的选项，`options` 是一个 _hash_，其中的一些元素会决定组件要不要显示额外的 HTML 结构，比如 _pagination_ 等。
 
@@ -101,7 +101,7 @@
 
   Swiper 自带一套标准的样式，都是以 `swiper-` 开头的样式类名。**因为这些样式是作用于全局的，所以千万不要去修改或覆盖它们！** 如果你需要自定义样式，可以通过传递 CSS Modules 样式类来做。
 
-  举例，假设我们在 `my-page` 模板里引用了 `ui/swiper-slider` 组件，那么我们可以在 `app/styles/my-page.css` 定义样式，然后传递给 `ui/swiper-slider`：
+  举例，假设我们在 `my-page` 模板里引用了 `ui/swiper-carousel` 组件，那么我们可以在 `app/styles/my-page.css` 定义样式，然后传递给 `ui/swiper-carousel`：
 
   ```css
   /* app/styles/my-page.css */
@@ -114,9 +114,9 @@
   ```htmlbars
   \{{!-- app/templates/my-page.hbs --}}
 
-  \{{#ui/swiper-slider local-class="custom-slider"}}
+  \{{#ui/swiper-carousel local-class="custom-slider"}}
     ...
-  \{{/ui/swiper-slider}}
+  \{{/ui/swiper-carousel}}
   ```
 
   于是，我们可以得到这样的 DOM：
@@ -142,7 +142,7 @@
   下面这个例子演示了用自定义的分页样式来替换默认的样子：
 
   ```htmlbars
-  \{{#ui/swiper-slider local-class="demo" options=(hash
+  \{{#ui/swiper-carousel local-class="demo" options=(hash
     pagination=(concat "." styles.demo-pagination)
     paginationClickable=true
     grabCursor=true
@@ -150,7 +150,7 @@
     centeredSlides=true
     )}}
     \{{!-- ... --}}
-  \{{/ui/swiper-slider}}
+  \{{/ui/swiper-carousel}}
   ```
 
   ```css
@@ -173,7 +173,7 @@
 <h3>Demo 2</h3>
 
 <section class="demo-wrapper">
-  {{#ui/swiper-slider local-class="demo" options=(hash
+  {{#ui/swiper-carousel local-class="demo" options=(hash
     pagination=(concat "." styles.demo-pagination)
     paginationClickable=true
     grabCursor=true
@@ -210,7 +210,7 @@
     <div class="swiper-slide" local-class="demo-slide">
       <img src="https://d13yacurqjgara.cloudfront.net/users/179241/screenshots/1879013/nerd_dribbble.png">
     </div>
-  {{/ui/swiper-slider}}
+  {{/ui/swiper-carousel}}
 </section>
 
 {{#ui-guide/re-markdown}}
@@ -222,20 +222,20 @@
 
   ### 行为控制
 
-  Swiper 提供了许多交互 API 供我们进一步的控制它的行为，实现复杂精细的 UI 交互。`ui/swiper-slider` 组件可以接收来自外部的 `action` 并正确处理这些动作。
+  Swiper 提供了许多交互 API 供我们进一步的控制它的行为，实现复杂精细的 UI 交互。`ui/swiper-carousel` 组件可以接收来自外部的 `action` 并正确处理这些动作。
 
-  在下面的例子中，_Go Prev_ 和 _Go Next_ 两个按钮是独立于 `ui/swiper-slider` 组件之外的，但我们需要用它们来控制幻灯片的前进和后退。
+  在下面的例子中，_Go Prev_ 和 _Go Next_ 两个按钮是独立于 `ui/swiper-carousel` 组件之外的，但我们需要用它们来控制幻灯片的前进和后退。
 
   Swiper 提供了 `onInit(swiper)` 回调在其完成初始化之后将实例对象传递进来，因此我们可以在外层定义一个 _action_ 作为该回调函数来接收 _swiper_ 实例：
 
   ```htmlbars
   \{{!-- 假设在 app/templates/components/my-component.hbs 模板中： --}}
-  \{{#ui/swiper-slider options=(hash
+  \{{#ui/swiper-carousel options=(hash
     ...
     onInit=(action "initSwiper" "mySwiper")
     }}
     ...
-  \{{/ui/swiper-slider}}
+  \{{/ui/swiper-carousel}}
   ```
 
   ```javascript
@@ -251,12 +251,12 @@
   现在 `my-component` 对象就获得了叫做 `mySwiper` 的 _swiper_ 实例对象，接着我们给按钮绑定 _action_ 来调用 Swiper 的方法：
 
   ```htmlbars
-  \{{#ui/swiper-slider options=(hash
+  \{{#ui/swiper-carousel options=(hash
     ...
     onInit=(action "initSwiper" "mySwiper")
     }}
     ...
-  \{{/ui/swiper-slider}}
+  \{{/ui/swiper-carousel}}
 
   <button type="button" onclick="action 'slideTo' 'mySwiper' 'prev'">Go Prev</button>
   <button type="button" onclick="action 'slideTo' 'mySwiper' 'next'">Go Next</button>
@@ -278,7 +278,7 @@
 {{/ui-guide/re-markdown}}
 
 <section class="demo-wrapper">
-  {{#ui/swiper-slider local-class="demo" options=(hash
+  {{#ui/swiper-carousel local-class="demo" options=(hash
     preloadImages=false
     lazyLoading=true
     loop=true
@@ -326,7 +326,7 @@
       <img class="swiper-lazy" data-src="https://d13yacurqjgara.cloudfront.net/users/179241/screenshots/1879013/nerd_dribbble.png">
       <div class="swiper-lazy-preloader"></div>
     </div>
-  {{/ui/swiper-slider}}
+  {{/ui/swiper-carousel}}
 </section>
 
 <button type="button" local-class="button" onclick={{action "slideTo" 'swiper' 'prev'}}>Go Prev</button>
@@ -338,7 +338,7 @@
   上个例子同时演示了 Swiper 一个很贴心的功能，即延迟加载幻灯片图片。下面是对应的代码：
 
   ```htmlbars
-  \{{#ui/swiper-slider local-class="demo" options=(hash
+  \{{#ui/swiper-carousel local-class="demo" options=(hash
     preloadImages=false
     lazyLoading=true
     ...
@@ -348,7 +348,7 @@
       <div class="swiper-lazy-preloader"></div>
     </div>
     ...
-  \{{/ui/swiper-slider}}
+  \{{/ui/swiper-carousel}}
   ```
 
   **延迟加载（Lazy Loading）和预加载（PreLoading）不是一个概念，做延迟加载的时候要禁用预加载：`preloadImages=false`。**

@@ -43,10 +43,6 @@
   fill: white;
 }
 
-@keyframes outer-rotation {
-  to {transform: rotate(90deg);}
-}
+@keyframes outer-rotation { to { transform: rotate(90deg) } }
 
-@keyframes inner-rotation {
-  to {transform: rotate(180deg);}
-}
+@keyframes inner-rotation { to { transform: rotate(180deg) } }

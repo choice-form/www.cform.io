@@ -1,7 +1,7 @@
 @import "common/variables.css";
 
 .button {
-  composes: button from "homeland/styles/common/helpers.css";
+  @apply --button;
 }
 
 .demo {

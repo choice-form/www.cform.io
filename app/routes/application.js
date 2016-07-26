@@ -1,13 +1,14 @@
-import Ember from 'ember';
+import Route from 'ember-route';
+import inject from 'ember-service/inject';
 
-export default Ember.Route.extend({
+export default Route.extend({
   hasLayout: false,
 
-  intl: Ember.inject.service(),
+  intl: inject(),
 
   beforeModel() {
     const navigator = window.navigator
     this.set('locale', navigator.language || navigator.userLanguage)
     return this.get('intl').setLocale(this.get('locale'))
   },
-})
+});

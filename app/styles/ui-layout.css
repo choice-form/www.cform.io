@@ -1,7 +1,8 @@
+@import "common/variables.css";
+
 .wrapper {
-  composes: wrapper from "homeland/styles/common/helpers.css";
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  @apply --wrapper;
+  padding: 1rem;
 }
 
 .title {

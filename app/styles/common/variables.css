@@ -1,21 +1,68 @@
 :root {
-  /* ONLY FOR MOCKUP */
-  --block-background: #4a4a4a;
-
-  /* COLORS */
   --orange: rgb(244, 130, 0);
   --yellow: rgb(255, 221, 32);
   --green:  rgb(152, 195, 53);
-  --blue:   rgb(15, 203, 255);
-  --purple: rgb(102, 51, 204);
+  --blue:   rgb(15,  203, 255);
+  --purple: rgb(102, 51,  204);
 
-  /* Z-INDEX */
-  --z-high: 50;
-  --z-menu: 80;
-  --z-over: 90;
+  --z-menu: 90;
+  --z-over: 99;
+
+  --wrapper {
+    clear: fix;
+    position: relative;
+
+    @media (--notfix) {
+      lost-center: 100%;
+    }
+
+    @media (--expand) {
+      lost-center: 960px;
+    }
+
+    @media (--widest) {
+      lost-center: 1200px;
+    }
+  }
+
+  --unstyled-list {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+
+    & > li {
+      font-size: 1rem;
+    }
+  }
+
+  --button {
+    padding: 6px 1rem;
+    background-color: white;
+    border-width: 0;
+    transition: all .2s;
+    cursor: pointer;
+  }
+
+  --button-primary {
+    display: inline-block;
+    padding: 6px 1rem;
+    color: white;
+    background-color: var(--orange);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background-color: color(var(--orange) shade(5%));
+    }
+  }
 }
 
-@custom-media --mobile (width <= 425px);
-@custom-media --tablet (width > 425px) and (width <= 768px);
-@custom-media --laptop (width > 768px) and (width <= 1024px);
-@custom-media --desktop (width > 1024px);
+@custom-media --notfix only screen and (width <= 960px);
+@custom-media --expand only screen and (width > 960px);
+@custom-media --widest only screen and (width > 1200px);
+
+@custom-media --mobile only screen and (320px < width <= 425px);
+@custom-media --tablet only screen and (425px < width <= 768px);
+@custom-media --laptop only screen and (768px < width <= 1024px);
+@custom-media --normal only screen and (1024px < width <= 1440px);

@@ -1,16 +1,20 @@
 @import "common/variables.css";
 
+.wrapper {
+  @apply --wrapper;
+}
+
+.banner > .wrapper {
+  padding: 1rem;
+}
+
+.footer > .wrapper {
+  padding: 0 1rem;
+}
+
 .banner {
   color: white;
   background-color: var(--purple);
-
-  & .wrapper {
-    padding: 1rem;
-  }
-}
-
-.wrapper {
-  composes: wrapper from "homeland/styles/common/helpers.css";
 }
 
 .brand {
@@ -29,7 +33,7 @@ nav {
   lost-column: 3/4 0 0;
   background-color: var(--purple);
 
-  @media(--mobile) {
+  @media (--mobile) {
     lost-column: none;
     z-index: var(--z-menu);
     position: absolute 80px 0 auto;
@@ -85,7 +89,8 @@ nav .session {
 }
 
 .signup {
-  composes: button button-primary from "homeland/styles/common/helpers.css";
+  @apply --button;
+  @apply --button-primary;
 }
 
 nav :any-link.signup {
@@ -108,7 +113,7 @@ nav :any-link.signup {
 
 .footer {
   color: white;
-  background-color: var(--block-background);
+  background-color: #4a4a4a;
 }
 
 .slogan {

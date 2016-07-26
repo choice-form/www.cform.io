@@ -1,6 +1,7 @@
+@import "common/variables";
+
 .wrapper {
-  composes: wrapper from "homeland/styles/common/helpers.css";
-  clear: fix;
+  @apply --wrapper;
 }
 
 :global(.demo-wrapper) {

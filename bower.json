@@ -1,16 +1,13 @@
 {
   "name": "homeland",
   "dependencies": {
-    "ember": "~2.6.0",
-    "ember-cli-shims": "~0.1.1",
-    "ember-cli-test-loader": "0.2.2",
+    "ember": "~2.7.0",
+    "ember-cli-shims": "0.1.3",
     "ember-qunit-notifications": "0.1.0",
-    "Swiper": "swiper#^3.3.1",
-    "scrollmagic": "^2.0.5",
-    "gsap": "^1.18.5",
     "normalize-css": "^4.2.0",
     "pretender": "~1.1.0",
     "Faker": "~3.1.0",
-    "remarkable": "^1.6.2"
+    "remarkable": "^1.6.2",
+    "highlightjs": "^9.5.0"
   }
 }

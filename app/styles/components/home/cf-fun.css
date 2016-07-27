@@ -1,0 +1,23 @@
+
+.fun-wrapper{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #8888ff;
+  clear: fix;
+}
+
+.half{
+  width: 50%;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+.fun-left-wrapper{
+
+}
+
+.fun-right-wrapper{
+
+}

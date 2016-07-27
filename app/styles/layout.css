@@ -14,7 +14,12 @@
 
 .banner {
   color: white;
-  background-color: var(--purple);
+  position: fixed;
+  top:0;
+  left: 0;
+  right:0;
+  z-index: 2;
+  //background-color: var(--purple);
 }
 
 .brand {
@@ -31,7 +36,6 @@
 
 nav {
   lost-column: 3/4 0 0;
-  background-color: var(--purple);
 
   @media (--mobile) {
     lost-column: none;

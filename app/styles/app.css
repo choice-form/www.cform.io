@@ -55,14 +55,14 @@ p, h1 {
   background-color: gray(255);
 }
 
-:global(.ui-guide a) {
+:global(a) {
   color: var(--purple);
   text-decoration: none;
   transition: color .2s;
 }
 
-:global(.ui-guide a:hover),
-:global(.ui-guide a:focus) {
+:global(a:hover),
+:global(a:focus) {
   color: color(var(--purple) shade(34%));
 }
 

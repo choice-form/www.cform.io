@@ -7,20 +7,42 @@
 body {
   margin: 0;
   font-family: Kiro, "Helvetica Neue", Helvetica, Arial, "Pingfang SC", STHeiti,
-               "Microsoft YaHei", 微软雅黑, sans-serif;
+  "Microsoft YaHei", 微软雅黑, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-pre { overflow-x: scroll; }
-pre, code { font: 0.875rem / 1.5 Hack, monospace; }
+pre {
+  overflow-x: scroll;
+}
 
-:global(.ember-application) { animation: application 0.5s }
-@keyframes application { from { opacity: 0 } to { opacity: 1 } }
+pre, code {
+  font: 0.875rem / 1.5 Hack, monospace;
+}
 
-[data-ember-action]:not(:disabled) {cursor: pointer}
+p, h1 {
+  margin: 0;
+  padding: 0
+}
+
+:global(.ember-application) {
+  animation: application 0.5s
+}
+
+@keyframes application {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+[data-ember-action]:not(:disabled) {
+  cursor: pointer
+}
 
 /* BELOW ARE ONLY USED FOR UI GUIDE */
 :global(.ui-guide) {

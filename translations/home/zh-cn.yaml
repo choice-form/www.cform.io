@@ -2,5 +2,8 @@ home:
   showcase:
     description: "科技改善生活，服务改变效率。<br />选择决定你的方式。"
     know-more: "了解更多 〉"
+  functions:
+    title: "逻辑清晰，极简至上。"
+    description: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts"
   example-slides:
     see-it-in-action: "查看案例"

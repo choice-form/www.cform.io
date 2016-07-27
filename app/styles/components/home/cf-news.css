@@ -1,0 +1,40 @@
+@import "../../common/variables.css";
+
+.news-wrapper{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./imgs/news-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.news-block{
+  @apply --wrapper;
+  position: relative;
+  height: 100%;
+}
+
+
+.info-wrapper{
+  position: absolute;
+  padding-bottom: 6.4375em;
+  color: var(--white);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  & p{
+    font-size: 3.75em;
+    display: block;
+    margin-bottom: 69px;
+  }
+
+  & a{
+    display: inline-block;
+    border-radius: 4px;
+    color: var(--white);
+    font-size: 1em;
+    padding: 1em 4.375em;
+    background-color: var(--orange);
+  }
+}

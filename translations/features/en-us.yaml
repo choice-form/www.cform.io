@@ -1,6 +1,3 @@
-home:
-  showcase:
-    description: "科技改善生活，服务改变效率。<br />选择决定你的方式。"
-    know-more: "learn more"
-  example-slides:
-    see-it-in-action: "see it in action"
+features:
+  title:
+    title-text: "逻辑清晰，极简至上。"

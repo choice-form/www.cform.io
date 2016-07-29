@@ -1,0 +1,44 @@
+@import "common/variables.css";
+
+.feature-list-content{
+  position: relative;
+  background-color: var(--blue);
+  padding: 1rem 0;
+}
+
+.back{
+  width: 3.75rem;
+  height: 3.75rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  fill: red;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+
+  & svg{
+    fill:white;
+    width: 30%;
+    position: absolute 0 0;
+    margin: auto;
+  }
+
+  @media (--mobile),(--tablet){
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+
+
+.content-wrapper{
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+
+  @media (--mobile){
+    width: 80%;
+  }
+}
+

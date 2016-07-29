@@ -67,7 +67,7 @@
 @custom-media --expand only screen and (width > 960px);
 @custom-media --widest only screen and (width > 1200px);
 
-@custom-media --mobile only screen and (320px < width <= 425px);
+@custom-media --mobile only screen and (width <= 425px);
 @custom-media --tablet only screen and (425px < width <= 768px);
 @custom-media --laptop only screen and (768px < width <= 1024px);
 @custom-media --normal only screen and (1024px < width <= 1440px);

@@ -1,0 +1,67 @@
+@import "common/variables.css";
+
+.fun-content{
+  position: relative;
+  width: 100vw;
+  clear: fix;
+}
+
+
+.text-wrapper{
+  width: 100vw;
+  position: relative;
+  z-index: var(--z-normal);
+}
+
+.info-wrapper{
+  width: 50%;
+  min-height: 100vh;
+  float:right;
+  display: table;
+  padding:  5rem 1rem;
+
+  @media (--mobile),(--tablet){
+    width: 100%;
+  }
+}
+
+.info-block{
+  display: table-cell;
+  vertical-align: middle;
+
+  & :any-link{
+    color : var(--purple)
+  }
+}
+
+.title{
+  font-size: 2.5rem;
+  margin-bottom: .875rem;
+  font-weight: 500;
+}
+
+.description{
+  font-size: 1.25rem;
+  margin-bottom: 1.875rem;
+  padding-right: 8em;
+  font-weight: lighter;
+}
+
+
+
+.image-wrapper{
+  position: absolute 0 0;
+}
+
+
+.wave{
+  position: absolute auto 0 0 0;
+  width: 100%;
+  padding-bottom: 64px;
+}
+
+.computer{
+  position: absolute auto auto 0 -20%;
+  width: 60%;
+}
+

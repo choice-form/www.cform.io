@@ -8,7 +8,7 @@ Ember.Route.reopen({
   hasLayout: true,
 
   renderTemplate() {
-    this._super(...arguments)
+      this._super(...arguments)
 
     if (/.*(loading|error)$/.test(this.routeName)) return
 

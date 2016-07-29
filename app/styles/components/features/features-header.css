@@ -1,0 +1,13 @@
+@import "common/variables.css";
+
+
+.header-wrapper{
+  padding: 16rem  1rem;
+  background-color: var(--blue);
+  text-align: center;
+  color: white;
+  & p{
+    font-size: 2.5rem;
+    font-weight: lighter;
+  }
+}

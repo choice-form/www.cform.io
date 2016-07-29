@@ -1,0 +1,14 @@
+@import "common/variables.css";
+
+
+.list-wrapper{
+  width: 60%;
+  margin: 0 auto;
+  color: var(--purple);
+  border-bottom: 1px solid var(--purple);
+}
+
+.list{
+  padding: 2rem .5rem;
+  text-align: left;
+}

@@ -18,3 +18,5 @@
 npm-debug.log
 .tern-port
 testem.log
+.idea/
+desgin

@@ -4,7 +4,12 @@
   --green:  rgb(152, 195, 53);
   --blue:   rgb(15,  203, 255);
   --purple: rgb(102, 51,  204);
+  --black: rgb(38, 38, 38);
+  --white : rgb(255,255,255);
+  --dark-gray: rgb(38, 38, 38);
+  --light-blue:rgb(234, 234, 242);
 
+  --z-normal: 10;
   --z-menu: 90;
   --z-over: 99;
 

@@ -1,4 +1,4 @@
-var EmberApp = require('ember-cli/lib/broccoli/ember-app')
+var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -23,10 +23,12 @@ module.exports = function(defaults) {
         js: '/assets/bundle.js'
       }
     }
-  })
+  });
 
   // Normalize.css
-  app.import('bower_components/normalize-css/normalize.css')
+  app.import('bower_components/normalize-css/normalize.css', {
+    prepend: true
+  });
 
-  return app.toTree()
-}
+  return app.toTree();
+};

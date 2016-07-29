@@ -11,10 +11,7 @@ application:
     signin: "登录"
     signup: "创建新账号"
   copyright: "&copy; 2016 choice form. 版权所有"
-  service:
-    title: "帮助你解决问题"
-    describe: "When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove"
-    operation: "Learn More"
+  learnMore: "了解更多 >"
 
 
 

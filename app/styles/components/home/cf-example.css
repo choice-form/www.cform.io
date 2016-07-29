@@ -11,13 +11,10 @@
   padding-top: 100px;
 
   & p {
-    font-size: 2.5em;
-    color: color(var(--dark-gray) alpha(80%));
+    font-size: responsive 1.6rem 1.6rem;
+    font-range: 768px 1200px;
 
-    @media (--mobile),(--tablet) {
-      font-size: 1.6em;
-      line-break: 2em;
-    }
+    color: color(var(--dark-gray) alpha(80%));
   }
 
   & span {
@@ -26,28 +23,23 @@
 }
 
 .describe {
-  font-size: 1.25em;
-  line-height: 1.5em;
+  font-size: responsive 1.15rem 1.25rem;
+  font-range: 768px 1200px;
+  line-height: 1.15;
   padding: 17px 0 32px 0;
   color: color(var(--dark-gray) alpha(80%));
 
-  @media (--mobile),(--tablet) {
-    font-size: 1.15em;
-    line-height: 1.15em;
-  }
 }
 
 .more {
   color: var(--purple);
-
-  @media (--mobile),(--tablet) {
-    font-size: 1em;
-    line-height: 1.2em;
-  }
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .example-box {
   position: relative;
+  padding-top: 40px;
 }
 
 .phone-box {
@@ -60,15 +52,48 @@
 }
 
 .content-screen {
-  position: absolute;
-  top: 80px;
-  height: 300px;
+@apply --wrapper;
+  height: 669px;
   overflow: hidden;
+  & li {
+  @apply --unstyled-list;
+    position: relative;
+    float: left;
+    width: 33.33%;
+    height: 669px;
+    background-size: 328px 669px;
+    background-image: url("./imgs/iPhone 6S.png");
+    background-repeat: no-repeat;
+
+    @media (--mobile),(--tablet) {
+      float: none;
+      width: 100%;
+      margin: auto;
+      margin-bottom: 110px;
+    }
+    & :last-child {
+      @media (--mobile),(--tablet) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (--mobile),(--tablet) {
+    overflow: auto;
+    height: auto;
+    padding: 0 10%;
+  }
 }
 
 .view-screen {
-  float: left;
-  width: 300px;
-  height: 300px;
-  /*background-color: yellowgreen;*/
+  width: 284px;
+  height: 506px;
+  background-color: yellowgreen;
+  position: absolute 82px 0 0 22px;
+
+  @media (--mobile),(--tablet) {
+    position: absolute 82px 0 0 22px;
+    margin: 0;
+    margin-bottom: 110px;
+  }
 }

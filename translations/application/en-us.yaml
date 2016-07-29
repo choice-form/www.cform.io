@@ -11,3 +11,4 @@ application:
     signin: "sign in"
     signup: "create an account"
   copyright: "&copy; 2016 choice form. All rights reserved"
+  learnMore: "Learn More >"

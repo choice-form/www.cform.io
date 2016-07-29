@@ -8,6 +8,7 @@
     "pretender": "~1.1.0",
     "Faker": "~3.1.0",
     "remarkable": "^1.6.2",
-    "highlightjs": "^9.5.0"
+    "highlightjs": "^9.5.0",
+    "device.js": "devicejs#^0.2.7"
   }
 }

@@ -58,5 +58,10 @@
     "postcss-reporter": "^1.4.1",
     "rucksack-css": "^0.8.6",
     "segment-js": "^1.0.8"
+  },
+  "ember-addon": {
+    "paths": [
+      "lib/device"
+    ]
   }
 }

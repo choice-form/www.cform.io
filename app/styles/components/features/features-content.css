@@ -3,7 +3,7 @@
 .feature-list-content{
   position: relative;
   background-color: var(--blue);
-  padding: 1rem 0;
+  padding-top: 64px;
 }
 
 .back{
@@ -28,17 +28,3 @@
     height: 2.8rem;
   }
 }
-
-
-.content-wrapper{
-  color: white;
-  padding: 5rem 1rem;
-  text-align: center;
-  width: 60%;
-  margin: 0 auto;
-
-  @media (--mobile){
-    width: 80%;
-  }
-}
-

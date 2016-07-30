@@ -12,7 +12,7 @@
 }
 
 .list-box{
-  width: 60%;
+  width: 50%;
   cursor: pointer;
   position: relative;
   margin: 0 auto;
@@ -52,5 +52,135 @@
   @media (--mobile),(--tablet){
     width: 2.8rem;
     height: 2.8rem;
+  }
+}
+
+
+
+.content-wrapper{
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+
+  @media (--laptop) {
+    width: 80%;
+  }
+
+  @media (--mobile),(--tablet){
+    width: 90%;
+  }
+
+}
+
+
+
+
+.content-block{
+  width: 100%;
+  clear: fix;
+  color: white;
+  text-align: left;
+  &>p {
+    padding: 3.6rem 0;
+    font-size: responsive 25px 30px;
+  }
+
+  &>div{
+    float: left;
+    &:first-of-type{
+      width: 30%;
+      @media (--tablet) {
+        width: 40%;
+      }
+    }
+
+    &:last-of-type{
+      width: 70%;
+      padding-left: 132px;
+
+      @media (--laptop) {
+        padding-left: 64px;
+      }
+
+      @media (--tablet) {
+        padding-left: 32px;
+        width: 60%;
+      }
+    }
+  }
+
+  @media (--mobile) {
+   &>p{
+     font-size: 30px;
+     text-align: center;
+   }
+    &>div{
+      width: 100% !important;
+      float: none;
+      &:first-of-type{
+        text-align: center;
+
+        & .icon-item{
+          margin: 0 auto;
+        }
+      }
+      &:last-of-type{
+        margin-top: 32px;
+        padding-left: 0;
+      }
+    }
+
+
+  }
+}
+
+
+.icon-list{
+  position: relative;
+  padding:20px 0;
+  border-top: 1px solid color(white alpha(30%));
+  text-align: left;
+  & svg{
+    position: absolute 0 auto auto 0;
+    width: 30px;
+  }
+
+  & p{
+    font-size: responsive 16px 20px;
+    font-range: 426px 1200px;
+    line-height: 1.1;
+  }
+
+  & span{
+    font-size: responsive 10px 12.5px;
+    font-range: 426px 1200px;
+    line-height: 1.2;
+    opacity: 0.8;
+  }
+
+}
+
+.icon-item{
+  position: relative;
+  padding-left: 50px;
+  display: table;
+}
+
+.info-block{
+  &:first-child{
+    margin-bottom: 56px;
+  }
+  & p{
+    font-size: responsive 24px 30px;
+    font-range: 426px 1200px;
+    margin-bottom: 28px;
+  }
+
+  & li{
+    font-size: responsive 12px 15px;
+    font-range: 426px 1200px;
+    line-height: 1.2;
   }
 }

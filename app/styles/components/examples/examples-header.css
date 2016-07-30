@@ -3,7 +3,7 @@
 
 .header-wrapper{
   padding: 80px 16px 0;
-  background-color: var(--blue);
+  background-color: var(--green);
   text-align: center;
   color: white;
   & p{

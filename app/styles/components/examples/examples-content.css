@@ -1,7 +1,8 @@
 @import "common/variables.css";
 
-.feature-list-content{
+.examples-list-content{
   position: relative;
+  background-color: var(--green);
   padding-top: 32px;
 }
 

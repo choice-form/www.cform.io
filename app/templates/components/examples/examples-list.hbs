@@ -1,0 +1,58 @@
+<div local-class="list-wrapper">
+  {{#each data as |d|}}
+      <div local-class="list-block">
+          <div local-class="list-box">
+              <div local-class="title">
+                {{d.title}}
+              </div>
+              <div local-class="description">
+                {{d.description}}
+              </div>
+
+              <div local-class="open-icon">
+                  <svg viewBox="1023 68 62 62">
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1024.000000, 69.000000)">
+                          <use stroke-opacity="0.499886775" stroke="#6633CC" stroke-width="2"></use>
+                          <polygon fill="#6633CC" points="20 28.3636364 20 31.6363636 28.3636364 31.6363636 28.3636364 40 31.6363636 40 31.6363636 31.6363636 40 31.6363636 40 28.3636364 31.6363636 28.3636364 31.6363636 20 28.3636364 20 28.3636364 28.3636364"></polygon>
+                      </g>
+                  </svg>
+              </div>
+          </div>
+
+        <div local-class="content-wrapper">
+            <div>
+              {{#examples/examples-content}}
+                  <div local-class="content-block">
+                      <div local-class="iframe-block">
+                          <iframe src="https://q.cform.io/?32QnAb&phone=1 " frameborder="0">
+                          </iframe>
+                      </div>
+
+                      <div local-class="info-block">
+                          <div local-class="text-block">
+                              <p>{{{t "examples.list-content.title"}}}</p>
+                              <p>一简入心</p>
+                              <li>操作简单，逻辑清晰</li>
+                              <li>无需代码，提高效率，操作简单，逻辑关系明确</li>
+                              <li>无需代码提高效率，操作简单，逻辑关系明确操作简单</li>
+                              <li>操作简单，逻辑清晰</li>
+                              <li>操作简单，逻辑清晰</li>
+                          </div>
+                          <div local-class="img-block">
+                              <img src="assets/imgs/news-bg.png"/>
+                          </div>
+
+
+                      </div>
+                  </div>
+
+              {{/examples/examples-content}}
+            </div>
+
+        </div>
+
+
+      </div>
+  {{/each}}
+</div>
+

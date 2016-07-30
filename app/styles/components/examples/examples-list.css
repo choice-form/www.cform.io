@@ -1,0 +1,146 @@
+@import "common/variables.css";
+
+
+.list-wrapper{
+  margin: 0 auto;
+  color: var(--purple);
+  padding-bottom: 3.6rem;
+}
+
+.list-block{
+
+}
+
+.list-box{
+  width: 50%;
+  max-width: 960px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem .5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--purple);
+  padding-right: 5.75rem;
+
+  &:last-of-type{
+    border-bottom: none;
+  }
+
+  @media (--mobile){
+    width: 80%;
+  }
+
+}
+
+.title{
+  font-size: responsive 1rem  1.25rem;
+  font-range: 768px 1200px;
+}
+
+.description{
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.open-icon{
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  margin: auto 0;
+  border: 2px solid color(var(--purple) alpha(50%));
+  position: absolute 0 0 0 auto;
+
+  @media (--mobile),(--tablet){
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+
+
+.content-wrapper{
+  background-color: var(--green);
+  width: 100%;
+
+  &>div{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.content-block{
+  color: white;
+  text-align: left;
+  max-width: 1440px;
+  width: 100%;
+  height: 736px;
+  margin: 0 auto;
+  padding-left: 416px;
+
+
+
+  @media (--notfix){
+    padding-left: 320px;
+    & .iframe-block{
+     width: 320px;
+    }
+  }
+
+  @media (--mobile),(--tablet){
+    padding-left: 0px !important;
+    height: auto;
+    & .iframe-block{
+      position: relative auto auto auto auto;
+      width: 100%;
+      max-width: 414px;
+      margin: 12px auto;
+      height: 568px;
+    }
+  }
+
+}
+
+.iframe-block{
+  width: 416px;
+  padding: 1px;
+  position: absolute 0 auto 0 0;
+
+  &>iframe{
+    width: 100%;
+    height: 100%;
+
+  }
+}
+
+.info-block{
+  width: 100%;
+  height: 736px;
+  padding: 0 24px;
+  position: relative;
+
+}
+
+
+.text-block{
+  height:60%;
+  padding: 12px 0;
+
+  & p{
+    font-size: 30px;
+    padding: 24px 0;
+  }
+
+  & li{
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+
+.img-block{
+  height: 40%;
+  overflow: hidden;
+  & img{
+    width: 100%;
+    object-fit: cover;
+  }
+}

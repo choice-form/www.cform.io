@@ -1,0 +1,151 @@
+@import "common/variables.css";
+
+.header-wrapper {
+  background-color: var(--orange-red);
+  text-align: center;
+  padding: 10rem 0;
+}
+
+.header-block {
+  width: 50%;
+  margin: auto;
+
+  & p, span {
+    font-size: responsive 1.5rem 2.5rem;
+    font-range: 768px 1200px;
+    line-height: 1.5;
+  }
+
+  & p {
+    color: white;
+
+    & i {
+      padding-right: 0.5rem;
+    }
+  }
+
+  & span {
+    color: rgba(0, 0, 0, .4);
+  }
+}
+
+/** 列表 */
+.list-wrapper {
+  margin: 0 auto;
+  color: var(--purple);
+  padding-bottom: 3.6rem;
+}
+
+.list-block {
+
+}
+
+.list-box {
+  width: 60%;
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem .5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--purple);
+  padding-right: 5.75rem;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  @media (--mobile) {
+    width: 80%;
+  }
+
+}
+
+.title {
+  font-size: responsive 1rem 1.25rem;
+  font-range: 768px 1200px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.open-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  margin: auto 0;
+  border: 2px solid color(var(--purple) alpha(50%));
+  position: absolute 0 0 0 auto;
+
+  @media (--mobile),(--tablet) {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}
+
+/* 详细内容  */
+.content-block {
+  text-align: left;
+
+  & img {
+    padding: 1rem 0;
+  }
+}
+
+.content-list {
+  display: inline-block;
+  width: 100%;
+}
+
+.simple-list, .detailed-list {
+  float: left;
+  width: 50%;
+}
+
+// 简要列表
+// todo:应用不上
+.simple-block{
+  width: 100%;
+  background-color: red;
+}
+
+.icon {
+  float: left;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin: auto 0;
+  border: 1px solid white;
+
+}
+
+.simple-content {
+  float: left;
+  width: 80%;
+  padding-left: 1rem;
+}
+
+// 详细列表
+// todo:应用不上
+.detailed-block {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.detailed-content{
+  padding-left: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

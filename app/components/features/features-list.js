@@ -42,6 +42,9 @@ export default Ember.Component.extend({
 
   iconTitle:['0','1','2','4'],
 
+
+  //TODO: 测试用 暂时有用
+
   isShowContent: false,
 
   actions:{

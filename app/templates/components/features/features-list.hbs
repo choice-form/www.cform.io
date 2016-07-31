@@ -9,7 +9,7 @@
                 {{d.description}}
               </div>
 
-              <div local-class="open-icon">
+              <div local-class="open-icon" {{action 'showContent'}}>
                   <svg viewBox="1023 68 62 62">
                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1024.000000, 69.000000)">
                           <use stroke-opacity="0.499886775" stroke="#6633CC" stroke-width="2"></use>
@@ -19,6 +19,7 @@
               </div>
           </div>
 
+        {{#if isShowContent}}
           {{#features/features-content}}
           <div local-class="content-wrapper">
               <div local-class="content-block">
@@ -64,9 +65,8 @@
                   </div>
               </div>
           </div>
-
           {{/features/features-content}}
-
+        {{/if}}
       </div>
   {{/each}}
 </div>

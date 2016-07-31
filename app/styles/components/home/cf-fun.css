@@ -22,6 +22,10 @@
 
   @media (--mobile),(--tablet){
     width: 100%;
+    text-align: center;
+    & .description{
+      padding-right: 0;
+    }
   }
 }
 
@@ -35,7 +39,7 @@
 }
 
 .title{
-  font-size: 2.5rem;
+  font-size: responsive 1.6rem 2.5rem;
   margin-bottom: .875rem;
   font-weight: 500;
 }

@@ -1,18 +1,60 @@
 <footer local-class="footer">
-  <div local-class="wrapper">
-    <p local-class="slogan">form follows choice</p>
+  <div local-class="wrapper footer-wrapper">
 
-    <ul local-class="languages">
-      <li><small>{{link-to "中文" "i18n" (query-params code="zh-cn")}}</small></li>
-      <li>{{link-to "En" "i18n" (query-params code="en-us")}}</li>
-    </ul>
+      <div local-class="cf-block">
+          <p local-class="slogan">form follows choice</p>
 
-    <ul local-class="social-links">
-      <li>F</li>
-      <li>G</li>
-      <li>T</li>
-    </ul>
+          <ul local-class="languages">
+              <li><small>{{link-to "中文" "i18n" (query-params code="zh-cn")}}</small></li>
+              <li>{{link-to "En" "i18n" (query-params code="en-us")}}</li>
+          </ul>
 
-    <p local-class="copyright"><small>{{{t "application.copyright"}}}</small></p>
+          <p local-class="copyright"><small>{{{t "application.copyright"}}}</small></p>
+
+
+      </div>
+
+      <div local-class="link-block">
+          <div local-class="product-block">
+              <p>product</p>
+              <ul>
+                  <li>{{link-to "tour" "features"}}</li>
+                  <li>{{link-to "example" "features"}}</li>
+              </ul>
+          </div>
+
+          <div local-class="service-block">
+              <p>service</p>
+              <ul>
+                  <li>{{link-to "sevice desgin" "services"}}</li>
+                  <li>{{link-to "private deployment" "services"}}</li>
+              </ul>
+          </div>
+
+          <div local-class="company-block">
+              <p>company</p>
+              <ul>
+                  <li>{{link-to "about choice form" "examples"}}</li>
+                  <li>{{link-to "terms & privacy" "examples"}}</li>
+                  <li>{{link-to  "contact us" "examples"}}</li>
+              </ul>
+          </div>
+
+          <div local-class="help-block">
+              <p>help</p>
+              <ul>
+                  <li>{{link-to "help center" "index"}}</li>
+                  <li>{{link-to "video" "index"}}</li>
+                  <li>{{link-to "FAQs" "index"}}</li>
+              </ul>
+          </div>
+
+      </div>
+
+      <ul local-class="social-links">
+          <li>F</li>
+          <li>G</li>
+          <li>T</li>
+      </ul>
   </div>
 </footer>

@@ -2,6 +2,7 @@
 
 .wrapper {
   @apply --wrapper;
+  clear: fix;
 }
 
 .banner > .wrapper {
@@ -27,7 +28,7 @@
   margin: 0;
   cursor: pointer;
 
-  @media (--mobile) {
+  @media (--mobile),(--tablet) {
     lost-column: none;
     padding-right: 0.5rem;
     text-align: right;
@@ -38,7 +39,7 @@ nav {
   lost-column: 3/4 0 0;
   line-height: 2rem;
 
-  @media (--mobile) {
+  @media (--mobile),(--tablet) {
     lost-column: none;
     z-index: var(--z-menu);
     position: absolute 80px 0 auto;
@@ -48,6 +49,7 @@ nav {
     transition: transform .3s ease-out, opacity .2s linear;
 
     &.shown {
+      background-color: var(--purple);
       opacity: 1;
       transform: scaleY(1);
     }
@@ -60,7 +62,7 @@ nav {
     font-weight: bold;
     text-decoration-line: none;
 
-    @media (--mobile) {
+    @media (--mobile),(--tablet) {
       display: block;
       padding: .75em 0;
       text-align: center;
@@ -72,7 +74,7 @@ nav .primary {
   lost-column: 3/5 0 0;
   text-align: center;
 
-  @media (--mobile) {
+  @media (--mobile),(--tablet) {
     lost-column: none;
     padding-bottom: .75em;
     border-bottom: 1px solid white;
@@ -84,7 +86,7 @@ nav .session {
   lost-column: 2/5 0 0;
   text-align: right;
 
-  @media (--mobile) {
+  @media (--mobile),(--tablet) {
     lost-column: none;
 
     & :any-link {
@@ -103,7 +105,7 @@ nav :any-link.signup {
   padding-right: 1rem;
   margin-left: 1rem;
 
-  @media (--mobile) {
+  @media (--mobile),(--tablet) {
     margin-left: 0;
   }
 }
@@ -111,14 +113,48 @@ nav :any-link.signup {
 .hamburger-menu {
   display: none;
 
-  @media (--mobile) {
+  @media (--mobile),(--tablet) {
     display: block;
   }
 }
 
+
+
+
+
+
+
+
+
 .footer {
   color: white;
   background-color: #4a4a4a;
+}
+
+.footer-wrapper{
+  padding-right: 168px !important;
+  font-size:  responsive 10px  16px;
+  font-range: 375px 768px;
+  @media (--mobile),(--tablet) {
+    padding-right: 1rem !important;
+
+    & .link-block{
+      width: 100%;
+    }
+  }
+}
+
+.cf-block{
+  float: left;
+  padding-top: 1.5rem;
+
+  & p{
+    padding-bottom: 32px;
+  }
+
+  & ul{
+  padding-bottom: 32px;
+  }
 }
 
 .slogan {
@@ -167,5 +203,50 @@ nav :any-link.signup {
 }
 
 .copyright {
+  clear: both;
   color: #8e8e8e;
+}
+
+
+.link-block{
+  float: right;
+  padding-top: 1.5rem;
+  margin: 0 3px;
+
+  @media (--tablet) {
+    width: 100%;
+    &>div{
+      padding: 0 6px;
+      width: 25%;
+    }
+  }
+
+  @media (--mobile) {
+    width: 100%;
+    &>div{
+      padding: 0 3px;
+      width: 25%;
+    }
+  }
+
+
+  &>div{
+    display: inline-block;
+    float: left;
+    padding: 0 24px;
+
+    @media (--notfix) {
+      padding: 0 6px;
+    }
+  }
+  & ul{
+    padding:0;
+  }
+  & li{
+    list-style: none;
+    display: table-row;
+    & a{
+      color: white;
+    }
+  }
 }

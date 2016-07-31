@@ -3,6 +3,7 @@
 .feature-list-content{
   position: relative;
   padding-top: 32px;
+  background-color: var(--blue);
 }
 
 .back{

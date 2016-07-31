@@ -62,7 +62,8 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/device"
+      "lib/device",
+      "lib/accordion"
     ]
   }
 }

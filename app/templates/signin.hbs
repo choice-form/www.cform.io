@@ -1,1 +1,23 @@
 {{outlet}}
+
+{{#accordion-list coexist=false as |accordion|}}
+  <button onclick={{action accordion.openAll}}>Open All</button>
+  <button onclick={{action accordion.closeAll}}>Close All</button>
+  <button onclick={{action accordion.toggleAll}}>Toggle All</button>
+
+  {{#each model as |post|}}
+    {{#accordion.item as |state|}}
+      <h3 onclick={{action accordion.toggle state.id}}>{{post.title}}</h3>
+
+      {{#if state.active}}
+        <p><em>{{state.id}}</em> - {{post.content}}</p>
+      {{/if}}
+
+      <code>{{state.active}}</code> | <code>{{state.inactive}}</code>
+
+      <button disabled={{state.active}} onclick={{action accordion.open state.id}}>Open</button>
+      <button disabled={{state.inactive}} onclick={{action accordion.close state.id}}>Close</button>
+      <button onclick={{action accordion.toggle state.id}}>Toggle</button>
+    {{/accordion.item}}
+  {{/each}}
+{{/accordion-list}}

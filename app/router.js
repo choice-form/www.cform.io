@@ -16,11 +16,11 @@ Router.map(function() {
   // 服务
   this.route('services')
 
-  // 登录
-  this.route('signin')
-
   // 团队
   this.route('team')
+
+  // 登录
+  this.route('signin')
 
   // 注册
   this.route('signup')

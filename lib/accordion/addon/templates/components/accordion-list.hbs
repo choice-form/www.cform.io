@@ -1,0 +1,8 @@
+{{yield (hash
+  item=(component "accordion-item" registry=(unbound registry))
+  open=(action "open")
+  close=(action "close")
+  toggle=(action "toggle")
+  openAll=(action _openAll (unbound registry))
+  closeAll=(action _closeAll (unbound registry))
+  toggleAll=(action _toggleAll (unbound registry)))}}

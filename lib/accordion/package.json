@@ -1,0 +1,11 @@
+{
+  "name": "accordion",
+  "keywords": [
+    "ember-addon",
+    "accordion",
+    "collapsed"
+  ],
+  "dependencies": {
+    "ember-cli-htmlbars": "^1.0.10"
+  }
+}

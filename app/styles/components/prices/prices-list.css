@@ -1,0 +1,102 @@
+@import "common/variables.css";
+
+.header-wrapper {
+  padding: 16rem 1rem;
+  background-color: var(--yellow);
+  text-align: center;
+  color: var(--dark-gray);
+  & p {
+    font-size: responsive 1.5rem 2.5rem;
+    font-range: 768px 1200px;
+    line-height: 1.5;
+  }
+}
+
+.prices-wrapper {
+@apply --wrapper;
+  width: 100vw;
+  text-align: center;
+  color: var(--purple);
+  padding: 1rem;
+  & h2 {
+    font-size: responsive 1.5rem 3.25rem;
+    font-range: 768px 1200px;
+  }
+
+  & h4 {
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
+
+  & ul {
+    margin-top: 1rem;
+    border-top: 1px solid var(--purple);
+    padding: 0 10%;
+
+    @media (--mobile),(--tablet) {
+      border-top: none;
+    }
+
+    & li {
+      list-style: none;
+      border-bottom: 1px solid var(--purple);
+      font-size: 1rem;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:first-child {
+        @media (--mobile),(--tablet) {
+          border-top: 1px solid var(--purple);
+        }
+      }
+    }
+  }
+}
+
+.prices-list {
+  display: inline-block;
+  padding-top: 1.5rem;
+
+  & .prices-block:last-child {
+    border-right: none;
+
+    @media (--mobile),(--tablet) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.prices-block {
+  width: 33.33%;
+  float: left;
+  border-right: 1px solid var(--purple);
+
+  @media (--mobile),(--tablet) {
+    border-right: none;
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: auto;
+  border: 2px solid var(--purple);
+}
+
+.money {
+  font-size: 3.25rem;
+}
+
+.buy-button {
+  width: 80%;
+  background-color: var(--purple);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+}

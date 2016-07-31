@@ -90,6 +90,9 @@
 
   & img {
     padding: 1rem 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -98,16 +101,27 @@
   width: 100%;
 }
 
-.simple-list, .detailed-list {
+/* 简单列表  */
+.simple-list {
   float: left;
   width: 50%;
+  padding-right: 10%;
+
+  & .simple-block:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (--mobile),(--tablet) {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 
-// 简要列表
-// todo:应用不上
-.simple-block{
+.simple-block {
   width: 100%;
-  background-color: red;
+  display: inline-block;
+  padding: 0.5rem;
+  border-top: 1px solid white;
 }
 
 .icon {
@@ -115,27 +129,49 @@
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  margin: auto 0;
+  margin: 0, auto;
   border: 1px solid white;
-
 }
 
 .simple-content {
   float: left;
-  width: 80%;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+
+  & h4 {
+    font-size: 1.25rem;
+  }
+
+  & span {
+    font-size: 0.78rem;
+  }
 }
 
-// 详细列表
-// todo:应用不上
+/* 详细列表 */
+.detailed-list {
+  float: left;
+  width: 50%;
+
+  & .detailed-block:last-child {
+    padding-bottom: 0;
+  }
+
+  @media (--mobile),(--tablet) {
+    width: 100%;
+  }
+}
+
 .detailed-block {
   width: 100%;
+  display: inline-block;
   padding-bottom: 1rem;
+
+  & ul {
+    padding: 1rem 0 0 7%;
+    font-size: 0.9rem;
+  }
 }
 
-.detailed-content{
-  padding-left: 10%;
-}
+
 
 
 

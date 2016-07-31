@@ -16,6 +16,12 @@ Router.map(function() {
   // 服务
   this.route('services')
 
+  // 价格
+  this.route('prices')
+
+  // 登录
+  this.route('signin')
+
   // 团队
   this.route('team')
 

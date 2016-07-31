@@ -1,0 +1,31 @@
+<div local-class="header-wrapper">
+  <p>{{t "prices.title"}}</p>
+</div>
+<div local-class="prices-wrapper">
+  <h2>选择决定你的方式</h2>
+  <div local-class="prices-list">
+    {{#each data.list as |d|}}
+      <div local-class="prices-block">
+        <div local-class="icon">
+          <svg viewBox="1023 68 62 62">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+               transform="translate(1024.000000, 69.000000)">
+              <use stroke-opacity="0.499886775" stroke="#6633CC" stroke-width="2"></use>
+              <polygon fill="#6633CC"
+                       points="20 28.3636364 20 31.6363636 28.3636364 31.6363636 28.3636364 40 31.6363636 40 31.6363636 31.6363636 40 31.6363636 40 28.3636364 31.6363636 28.3636364 31.6363636 20 28.3636364 20 28.3636364 28.3636364"></polygon>
+            </g>
+          </svg>
+        </div>
+        <h4>{{d.title}}</h4>
+        <span>{{d.description}}</span>
+        <ul>
+          {{#each d.itemList as |item|}}
+            <li>{{item}}</li>
+          {{/each}}
+        </ul>
+        <span local-class="money">{{d.price}}</span>
+        <button local-class="buy-button">buy</button>
+      </div>
+    {{/each}}
+  </div>
+</div>

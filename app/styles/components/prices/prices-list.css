@@ -73,6 +73,10 @@
   float: left;
   border-right: 1px solid var(--purple);
 
+  & span{
+    padding: 0 10%;
+  }
+
   @media (--mobile),(--tablet) {
     border-right: none;
     width: 100%;

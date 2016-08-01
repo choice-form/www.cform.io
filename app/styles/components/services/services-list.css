@@ -84,9 +84,37 @@
   }
 }
 
-/* 详细内容  */
+
+
+
+.content-wrapper {
+  color: white;
+  padding: 32px 1rem;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+
+  @media (--laptop) {
+    width: 80%;
+  }
+
+  @media (--mobile),(--tablet) {
+    width: 90%;
+  }
+
+}
+
 .content-block {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: fix;
+  color: white;
   text-align: left;
+  & > p {
+    padding: 24px 0;
+    font-size: responsive 25px 30px;
+  }
 
   & img {
     padding: 1rem 0;
@@ -94,82 +122,109 @@
     height: 100%;
     object-fit: cover;
   }
+
+  & > div {
+    float: left;
+  }
+
+  @media (--mobile) {
+    & > p {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    & > div {
+      width: 100% !important;
+      float: none;
+    }
+  }
 }
 
-.content-list {
-  display: inline-block;
-  width: 100%;
-}
-
-/* 简单列表  */
+/* 简要列表 */
 .simple-list {
-  float: left;
-  width: 50%;
-  padding-right: 10%;
-
-  & .simple-block:last-child {
-    padding-bottom: 0;
+  width: 30%;
+  @media (--tablet) {
+    width: 40%;
   }
 
-  @media (--mobile),(--tablet) {
-    width: 100%;
-    padding-right: 0;
+  @media (--mobile) {
+    text-align: center;
+
+    & .icon-item {
+      margin: 0 auto;
+    }
   }
+
 }
 
-.simple-block {
-  width: 100%;
-  display: inline-block;
-  padding: 0.5rem;
-  border-top: 1px solid white;
-}
+.simple-wrapper {
+  position: relative;
+  padding: 20px 0;
+  border-top: 1px solid color(white alpha(30%));
+  text-align: left;
+  & svg {
+    position: absolute 0 auto auto 0;
+    width: 30px;
+  }
 
-.icon {
-  float: left;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  margin: 0, auto;
-  border: 1px solid white;
-}
-
-.simple-content {
-  float: left;
-  padding-left: 0.5rem;
-
-  & h4 {
-    font-size: 1.25rem;
+  & p {
+    font-size: responsive 16px 20px;
+    font-range: 426px 1200px;
+    line-height: 1.1;
   }
 
   & span {
-    font-size: 0.78rem;
+    font-size: responsive 10px 12.5px;
+    font-range: 426px 1200px;
+    line-height: 1.2;
+    opacity: 0.8;
   }
+
 }
 
-/* 详细列表 */
-.detailed-list {
-  float: left;
-  width: 50%;
+.simple-block {
+  position: relative;
+  padding-left: 50px;
+  display: table;
+}
 
-  & .detailed-block:last-child {
-    padding-bottom: 0;
+/* 详细列表  */
+.detailed-list {
+  width: 70%;
+  padding-left: 132px;
+
+  @media (--laptop) {
+    padding-left: 64px;
   }
 
-  @media (--mobile),(--tablet) {
-    width: 100%;
+  @media (--tablet) {
+    padding-left: 32px;
+    width: 60%;
+  }
+
+  @media (--mobile) {
+    margin-top: 32px;
+    padding-left: 0;
   }
 }
 
 .detailed-block {
-  width: 100%;
-  display: inline-block;
-  padding-bottom: 1rem;
+  &:first-child {
+    margin-bottom: 56px;
+  }
+  & p {
+    font-size: responsive 24px 30px;
+    font-range: 426px 1200px;
+    margin-bottom: 28px;
+  }
 
-  & ul {
-    padding: 1rem 0 0 7%;
-    font-size: 0.9rem;
+  & li {
+    font-size: responsive 12px 15px;
+    font-range: 426px 1200px;
+    line-height: 1.2;
   }
 }
+
 
 
 

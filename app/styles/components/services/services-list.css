@@ -17,6 +17,7 @@
   }
 
   & p {
+  @apply --clear-box;
     color: white;
 
     & i {
@@ -112,6 +113,7 @@
   color: white;
   text-align: left;
   & > p {
+  @apply --clear-box;
     padding: 24px 0;
     font-size: responsive 25px 30px;
   }
@@ -129,6 +131,7 @@
 
   @media (--mobile) {
     & > p {
+    @apply --clear-box;
       font-size: 30px;
       text-align: center;
     }
@@ -149,10 +152,6 @@
 
   @media (--mobile) {
     text-align: center;
-
-    & .icon-item {
-      margin: 0 auto;
-    }
   }
 
 }
@@ -168,6 +167,7 @@
   }
 
   & p {
+  @apply --clear-box;
     font-size: responsive 16px 20px;
     font-range: 426px 1200px;
     line-height: 1.1;
@@ -186,6 +186,9 @@
   position: relative;
   padding-left: 50px;
   display: table;
+  @media (--mobile) {
+    margin: 0 auto;
+  }
 }
 
 /* 详细列表  */
@@ -213,6 +216,7 @@
     margin-bottom: 56px;
   }
   & p {
+  @apply --clear-box;
     font-size: responsive 24px 30px;
     font-range: 426px 1200px;
     margin-bottom: 28px;

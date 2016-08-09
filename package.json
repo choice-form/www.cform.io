@@ -19,7 +19,7 @@
   "author": "余凡 <albert@cform.io>",
   "license": "MIT",
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.5",
+    "broccoli-asset-rev": "^2.4.6",
     "cssnano": "^3.7.3",
     "d3-ease": "^1.0.0",
     "ember-ajax": "^2.4.1",

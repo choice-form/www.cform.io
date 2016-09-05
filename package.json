@@ -54,7 +54,7 @@
     "lost": "^7.0.3",
     "postcss-assets": "^4.1.0",
     "postcss-browser-reporter": "^0.5.0",
-    "postcss-cssnext": "^2.7.0",
+    "postcss-cssnext": "^2.8.0",
     "postcss-import": "^8.1.2",
     "postcss-reporter": "^1.4.1",
     "rucksack-css": "^0.8.6",

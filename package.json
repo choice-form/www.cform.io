@@ -44,7 +44,7 @@
     "ember-css-modules": "^0.4.0",
     "ember-data": "^2.7.0",
     "ember-export-application-global": "^1.0.5",
-    "ember-intl": "^2.13.0",
+    "ember-intl": "^2.14.0",
     "ember-load-initializers": "^0.5.1",
     "ember-normalize": "1.0.0",
     "ember-qunit-nice-errors": "1.0.0",

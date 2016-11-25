@@ -57,7 +57,7 @@
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-reporter": "^1.4.1",
-    "rucksack-css": "^0.8.6",
+    "rucksack-css": "^0.9.1",
     "segment-js": "^1.0.8"
   },
   "ember-addon": {

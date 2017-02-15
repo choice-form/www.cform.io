@@ -22,7 +22,7 @@
     "broccoli-asset-rev": "^2.4.5",
     "cssnano": "^3.7.3",
     "d3-ease": "^1.0.0",
-    "ember-ajax": "^2.4.1",
+    "ember-ajax": "^2.5.5",
     "ember-browserify": "^1.1.11",
     "ember-cli": "2.7.0",
     "ember-cli-app-version": "^1.0.0",
